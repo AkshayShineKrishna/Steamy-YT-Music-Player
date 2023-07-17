@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
+import 'package:steamy/presentation/splash/splash.dart';
 import 'core/di/injectable.dart';
-import 'presentation/home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,15 +17,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: ((ctx) => getIt<HomeBloc>()))],
+      providers: [
+        BlocProvider(create: ((ctx) => getIt<HomeBloc>())),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Steamy',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: MyHomePage(),
+        home: const ScreenSplash(),
       ),
     );
   }
