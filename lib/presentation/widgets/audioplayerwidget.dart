@@ -1,6 +1,7 @@
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/position%20data/model/positiondata.dart';
@@ -38,11 +39,29 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   @override
   void initState() {
     super.initState();
-    const String serverIp = ApiEndpoints.streamUrl;
-    final String ytUrl = widget.url;
-    _audioPlayer = AudioPlayer()..setUrl('$serverIp=$ytUrl');
+    _audioPlayer = AudioPlayer();
+    _init();
   }
 
+  Future<void> _init() async {
+    const String serverIp = ApiEndpoints.streamUrl;
+    final String ytUrl = widget.url;
+    final _playlist = ConcatenatingAudioSource(
+      children: [
+        AudioSource.uri(
+            Uri.parse(
+              '$serverIp=$ytUrl',
+            ),
+            tag: MediaItem(
+                id: '0',
+                title: widget.title,
+                duration: _audioPlayer.duration,
+                artUri: Uri.parse(
+                    'https://img.youtube.com/vi/${widget.videoId}/0.jpg')))
+      ],
+    );
+    await _audioPlayer.setAudioSource(_playlist);
+  }
   @override
   void dispose() {
     _audioPlayer.dispose();
