@@ -20,18 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String youtubeUrl) getDownloads,
     required TResult Function() initialize,
+    required TResult Function() deleteDirectory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String youtubeUrl)? getDownloads,
     TResult? Function()? initialize,
+    TResult? Function()? deleteDirectory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String youtubeUrl)? getDownloads,
     TResult Function()? initialize,
+    TResult Function()? deleteDirectory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetDownloads value) getDownloads,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_deleteDirectory value) deleteDirectory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetDownloads value)? getDownloads,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_deleteDirectory value)? deleteDirectory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetDownloads value)? getDownloads,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_deleteDirectory value)? deleteDirectory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +146,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult when<TResult extends Object?>({
     required TResult Function(String youtubeUrl) getDownloads,
     required TResult Function() initialize,
+    required TResult Function() deleteDirectory,
   }) {
     return getDownloads(youtubeUrl);
   }
@@ -149,6 +156,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String youtubeUrl)? getDownloads,
     TResult? Function()? initialize,
+    TResult? Function()? deleteDirectory,
   }) {
     return getDownloads?.call(youtubeUrl);
   }
@@ -158,6 +166,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String youtubeUrl)? getDownloads,
     TResult Function()? initialize,
+    TResult Function()? deleteDirectory,
     required TResult orElse(),
   }) {
     if (getDownloads != null) {
@@ -171,6 +180,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetDownloads value) getDownloads,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_deleteDirectory value) deleteDirectory,
   }) {
     return getDownloads(this);
   }
@@ -180,6 +190,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetDownloads value)? getDownloads,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_deleteDirectory value)? deleteDirectory,
   }) {
     return getDownloads?.call(this);
   }
@@ -189,6 +200,7 @@ class _$_GetDownloads implements _GetDownloads {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetDownloads value)? getDownloads,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_deleteDirectory value)? deleteDirectory,
     required TResult orElse(),
   }) {
     if (getDownloads != null) {
@@ -248,6 +260,7 @@ class _$_Initialize implements _Initialize {
   TResult when<TResult extends Object?>({
     required TResult Function(String youtubeUrl) getDownloads,
     required TResult Function() initialize,
+    required TResult Function() deleteDirectory,
   }) {
     return initialize();
   }
@@ -257,6 +270,7 @@ class _$_Initialize implements _Initialize {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String youtubeUrl)? getDownloads,
     TResult? Function()? initialize,
+    TResult? Function()? deleteDirectory,
   }) {
     return initialize?.call();
   }
@@ -266,6 +280,7 @@ class _$_Initialize implements _Initialize {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String youtubeUrl)? getDownloads,
     TResult Function()? initialize,
+    TResult Function()? deleteDirectory,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -279,6 +294,7 @@ class _$_Initialize implements _Initialize {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetDownloads value) getDownloads,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_deleteDirectory value) deleteDirectory,
   }) {
     return initialize(this);
   }
@@ -288,6 +304,7 @@ class _$_Initialize implements _Initialize {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetDownloads value)? getDownloads,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_deleteDirectory value)? deleteDirectory,
   }) {
     return initialize?.call(this);
   }
@@ -297,6 +314,7 @@ class _$_Initialize implements _Initialize {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetDownloads value)? getDownloads,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_deleteDirectory value)? deleteDirectory,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -308,6 +326,114 @@ class _$_Initialize implements _Initialize {
 
 abstract class _Initialize implements HomeEvent {
   const factory _Initialize() = _$_Initialize;
+}
+
+/// @nodoc
+abstract class _$$_deleteDirectoryCopyWith<$Res> {
+  factory _$$_deleteDirectoryCopyWith(
+          _$_deleteDirectory value, $Res Function(_$_deleteDirectory) then) =
+      __$$_deleteDirectoryCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_deleteDirectoryCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_deleteDirectory>
+    implements _$$_deleteDirectoryCopyWith<$Res> {
+  __$$_deleteDirectoryCopyWithImpl(
+      _$_deleteDirectory _value, $Res Function(_$_deleteDirectory) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_deleteDirectory implements _deleteDirectory {
+  const _$_deleteDirectory();
+
+  @override
+  String toString() {
+    return 'HomeEvent.deleteDirectory()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_deleteDirectory);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String youtubeUrl) getDownloads,
+    required TResult Function() initialize,
+    required TResult Function() deleteDirectory,
+  }) {
+    return deleteDirectory();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String youtubeUrl)? getDownloads,
+    TResult? Function()? initialize,
+    TResult? Function()? deleteDirectory,
+  }) {
+    return deleteDirectory?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String youtubeUrl)? getDownloads,
+    TResult Function()? initialize,
+    TResult Function()? deleteDirectory,
+    required TResult orElse(),
+  }) {
+    if (deleteDirectory != null) {
+      return deleteDirectory();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetDownloads value) getDownloads,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_deleteDirectory value) deleteDirectory,
+  }) {
+    return deleteDirectory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetDownloads value)? getDownloads,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_deleteDirectory value)? deleteDirectory,
+  }) {
+    return deleteDirectory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetDownloads value)? getDownloads,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_deleteDirectory value)? deleteDirectory,
+    required TResult orElse(),
+  }) {
+    if (deleteDirectory != null) {
+      return deleteDirectory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _deleteDirectory implements HomeEvent {
+  const factory _deleteDirectory() = _$_deleteDirectory;
 }
 
 /// @nodoc

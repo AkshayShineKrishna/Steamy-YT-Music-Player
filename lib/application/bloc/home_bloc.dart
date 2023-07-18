@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:steamy/domain/core/failure/main_failure.dart';
+import 'package:steamy/domain/delete%20directory/deleteservices.dart';
 import 'package:steamy/domain/downloads/Model/downloads_response.dart';
 import 'package:steamy/domain/downloads/downloadsservices.dart';
 
@@ -14,7 +15,9 @@ part 'home_bloc.freezed.dart';
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final DownloadsServices _downloadsServices;
-  HomeBloc(this._downloadsServices) : super(HomeState.initial()) {
+  final DeleteServices _deleteServices;
+  HomeBloc(this._downloadsServices, this._deleteServices)
+      : super(HomeState.initial()) {
     on<_GetDownloads>((event, emit) async {
       emit(const HomeState(
         responseResult: [],
@@ -26,7 +29,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           await _downloadsServices.getDownloads(youtubeUrl: event.youtubeUrl);
       result.fold((MainFailure failure) {
         emit(const HomeState(
-            responseResult: [], isLoading: false, isError: true,));
+          responseResult: [],
+          isLoading: false,
+          isError: true,
+        ));
       }, (DownloadsResponse success) {
         log(success.result.toString());
         emit(HomeState(
@@ -42,7 +48,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isLoading: false,
         isError: false,
       ));
-  });
+    });
+    on<_deleteDirectory>((event, emit) async {
+      final result = await _deleteServices.deleteDirectory();
+      log(result.toString());
+    });
   }
-  
 }

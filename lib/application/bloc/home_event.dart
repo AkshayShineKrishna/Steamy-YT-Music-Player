@@ -6,4 +6,5 @@ class HomeEvent with _$HomeEvent {
     required String youtubeUrl,
   }) = _GetDownloads;
   const factory HomeEvent.initialize() = _Initialize;
+  const factory HomeEvent.deleteDirectory() = _deleteDirectory;
 }
