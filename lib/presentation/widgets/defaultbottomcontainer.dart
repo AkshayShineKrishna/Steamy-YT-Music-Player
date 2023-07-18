@@ -12,9 +12,10 @@ class DefaultBottomContainer extends StatelessWidget {
   // final String url;
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
         width: double.infinity,
-        height: 350,
+        height: size.height < 800 ? size.height * 0.35 : size.height * 0.4,
         decoration: const BoxDecoration(
           color: kWhite,
           borderRadius: BorderRadius.only(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
@@ -10,6 +9,7 @@ class DefaultImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -17,17 +17,23 @@ class DefaultImageWidget extends StatelessWidget {
         BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             if (state.isLoading) {
-              return const CircularProgressIndicator();
+              return SizedBox(
+                height: size.width * 0.4,
+                child: Image.asset(
+                  'assets/loading.gif',
+                  fit: BoxFit.fill,
+                ),
+              );
             } else if (state.isError) {
               return SizedBox(
-                height: 250,
+                height: size.width * 0.6,
                 child: Image.asset('assets/error.png'),
               );
             } else if (state.responseResult.isNotEmpty) {
               final videoId = state.responseResult.first.videoId;
               return Container(
-                width: 400,
-                height: 220,
+                width: size.width * 0.9,
+                height: size.width * 0.5,
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
                     image: DecorationImage(
@@ -37,7 +43,7 @@ class DefaultImageWidget extends StatelessWidget {
               );
             }
             return SizedBox(
-              height: 250,
+              height: size.width * 0.6,
               child: Image.asset('assets/illustration.png'),
             );
           },

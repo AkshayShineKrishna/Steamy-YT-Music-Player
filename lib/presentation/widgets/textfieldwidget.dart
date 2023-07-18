@@ -67,9 +67,8 @@ class TextFieldWidget extends StatelessWidget {
               log('URL: $url');
               BlocProvider.of<HomeBloc>(context)
                   .add(HomeEvent.getDownloads(youtubeUrl: url));
-            }else{
-              BlocProvider.of<HomeBloc>(context)
-                  .add(HomeEvent.initialize());
+            } else {
+              BlocProvider.of<HomeBloc>(context).add(HomeEvent.initialize());
             }
           },
           child: Container(
