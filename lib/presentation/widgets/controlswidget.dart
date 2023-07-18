@@ -30,7 +30,13 @@ class ControlsWidget extends StatelessWidget {
                   iconSize: 80,
                 );
               }
-              return const Text('oops - unable to play');
+              return IconButton(
+                onPressed: () {
+                  audioPlayer.seek(Duration(seconds: 0));
+                },
+                icon: const Icon(Icons.replay),
+                iconSize: 80,
+              );
             }),
       ],
     );

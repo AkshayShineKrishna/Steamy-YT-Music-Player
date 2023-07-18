@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
@@ -6,7 +5,6 @@ import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/widgets/TextFieldWidget.dart';
 import 'package:steamy/presentation/widgets/audioplayerwidget.dart';
 import 'package:steamy/presentation/widgets/defaultbottomcontainer.dart';
-
 import 'package:steamy/presentation/widgets/defaultimagewidget.dart';
 import 'package:steamy/presentation/widgets/defaultmessage.dart';
 import 'package:steamy/presentation/widgets/titlewidget.dart';
@@ -17,9 +15,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // WidgetsBinding.instance!.addPostFrameCallback((_) {
-    //   BlocProvider.of<HomeBloc>(context);
-    // });
     return Scaffold(
       backgroundColor: Colors.deepPurple[700],
       resizeToAvoidBottomInset: false, // Set resizeToAvoidBottomInset to false
@@ -47,6 +42,7 @@ class MyHomePage extends StatelessWidget {
                   return DefaultBottomContainer(
                       widget: AudioPlayerWidget(
                     title: state.responseResult.first.title!,
+                    videoId: state.responseResult.first.videoId!,
                     url: urlController.text.trim(),
                   ));
                 }

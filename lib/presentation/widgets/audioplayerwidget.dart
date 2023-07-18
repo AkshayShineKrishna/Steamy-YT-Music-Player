@@ -7,11 +7,10 @@ import 'package:steamy/domain/position%20data/model/positiondata.dart';
 import 'controlswidget.dart';
 import 'package:steamy/domain/core/apiendpoints.dart';
 
-
 class AudioPlayerWidget extends StatefulWidget {
-  final String url, title;
+  final String url, title,videoId;
 
-  const AudioPlayerWidget({super.key, required this.url, required this.title});
+  const AudioPlayerWidget({super.key, required this.url, required this.title,required this.videoId});
 
   @override
   State<AudioPlayerWidget> createState() => _AudioPlayerWidgetState();
@@ -19,6 +18,7 @@ class AudioPlayerWidget extends StatefulWidget {
 
 class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   late AudioPlayer _audioPlayer;
+
   Stream<PositionData> get _positionDataStream =>
       Rx.combineLatest3<Duration, Duration, Duration?, PositionData>(
           _audioPlayer.positionStream,
@@ -38,7 +38,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   @override
   void initState() {
     super.initState();
-    final String serverIp = ApiEndpoints.streamUrl;
+    const String serverIp = ApiEndpoints.streamUrl;
     final String ytUrl = widget.url;
     _audioPlayer = AudioPlayer()..setUrl('$serverIp=$ytUrl');
   }
