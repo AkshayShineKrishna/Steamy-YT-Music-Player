@@ -9,9 +9,14 @@ import 'controlswidget.dart';
 import 'package:steamy/domain/core/apiendpoints.dart';
 
 class AudioPlayerWidget extends StatefulWidget {
-  final String url, title,videoId;
+  final String url, title, videoId, artist;
 
-  const AudioPlayerWidget({super.key, required this.url, required this.title,required this.videoId});
+  const AudioPlayerWidget(
+      {super.key,
+      required this.url,
+      required this.title,
+      required this.videoId,
+      required this.artist});
 
   @override
   State<AudioPlayerWidget> createState() => _AudioPlayerWidgetState();
@@ -55,13 +60,14 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
             tag: MediaItem(
                 id: '0',
                 title: widget.title,
-                duration: _audioPlayer.duration,
+                artist: widget.artist,
                 artUri: Uri.parse(
                     'https://img.youtube.com/vi/${widget.videoId}/0.jpg')))
       ],
     );
     await _audioPlayer.setAudioSource(_playlist);
   }
+
   @override
   void dispose() {
     _audioPlayer.dispose();
@@ -91,6 +97,11 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                 overflow: TextOverflow.fade,
               )),
             ],
+          ),
+          Text(
+            widget.artist,
+            style:
+                (TextStyle(fontWeight: FontWeight.w600, color: Colors.black54)),
           ),
           kHeight,
           StreamBuilder<PositionData>(

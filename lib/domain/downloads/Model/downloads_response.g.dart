@@ -23,6 +23,7 @@ ResultData _$ResultDataFromJson(Map<String, dynamic> json) => ResultData(
       filename: json['filename'] as String?,
       title: json['title'] as String?,
       videoId: json['videoId'] as String?,
+      artist: json['channel'] as String?,
     );
 
 Map<String, dynamic> _$ResultDataToJson(ResultData instance) =>
@@ -30,4 +31,5 @@ Map<String, dynamic> _$ResultDataToJson(ResultData instance) =>
       'filename': instance.filename,
       'title': instance.title,
       'videoId': instance.videoId,
+      'channel': instance.artist,
     };

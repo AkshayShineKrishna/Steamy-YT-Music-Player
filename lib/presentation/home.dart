@@ -44,6 +44,7 @@ class MyHomePage extends StatelessWidget {
                     title: state.responseResult.first.title!,
                     videoId: state.responseResult.first.videoId!,
                     url: urlController.text.trim(),
+                    artist: state.responseResult.first.artist!,
                   ));
                 }
                 return const DefaultBottomContainer(

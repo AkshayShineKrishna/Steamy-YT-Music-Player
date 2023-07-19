@@ -24,8 +24,10 @@ class ResultData {
   String? title;
   @JsonKey(name: 'videoId')
   String? videoId;
+  @JsonKey(name: 'channel')
+  String? artist;
 
-  ResultData({this.filename, this.title, this.videoId});
+  ResultData({this.filename, this.title, this.videoId, this.artist});
 
   factory ResultData.fromJson(Map<String, dynamic> json) {
     return _$ResultDataFromJson(json);
