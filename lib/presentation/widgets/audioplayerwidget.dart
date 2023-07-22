@@ -49,7 +49,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   }
 
   Future<void> _init() async {
-    const String serverIp = ApiEndpoints.streamUrl;
+    const String serverIp = ApiEndpoints.stream;
     final String ytUrl = widget.url;
     final _playlist = ConcatenatingAudioSource(
       children: [
@@ -117,7 +117,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                   onSeek: _audioPlayer.seek,
                 );
               }),
-          ControlsWidget(audioPlayer: _audioPlayer),
+          ControlsWidget(audioPlayer: _audioPlayer,url: widget.url),
         ],
       ),
     );

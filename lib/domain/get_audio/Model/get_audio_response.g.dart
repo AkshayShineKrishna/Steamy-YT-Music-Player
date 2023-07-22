@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'downloads_response.dart';
+part of 'get_audio_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-DownloadsResponse _$DownloadsResponseFromJson(Map<String, dynamic> json) =>
-    DownloadsResponse(
+GetAudioResponse _$GetAudioResponseFromJson(Map<String, dynamic> json) =>
+    GetAudioResponse(
       result: (json['result'] as List<dynamic>?)
               ?.map((e) => ResultData.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );
 
-Map<String, dynamic> _$DownloadsResponseToJson(DownloadsResponse instance) =>
+Map<String, dynamic> _$GetAudioResponseToJson(GetAudioResponse instance) =>
     <String, dynamic>{
       'result': instance.result,
     };

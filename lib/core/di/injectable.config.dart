@@ -12,10 +12,10 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:steamy/application/bloc/home_bloc.dart' as _i7;
-import 'package:steamy/domain/delete%20directory/deleteservices.dart' as _i3;
-import 'package:steamy/domain/downloads/downloadsservices.dart' as _i5;
-import 'package:steamy/infrastructure/deleteImpl.dart' as _i4;
-import 'package:steamy/infrastructure/downloadsImpl.dart' as _i6;
+import 'package:steamy/domain/get_audio/get_audio_services.dart' as _i3;
+import 'package:steamy/domain/refresh/refreshservices.dart' as _i5;
+import 'package:steamy/infrastructure/get_audio_impl.dart' as _i4;
+import 'package:steamy/infrastructure/refreshImpl.dart' as _i6;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -28,11 +28,11 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.lazySingleton<_i3.DeleteServices>(() => _i4.DeleteImpl());
-    gh.lazySingleton<_i5.DownloadsServices>(() => _i6.DownloadsImpl());
+    gh.lazySingleton<_i3.GetAudioServices>(() => _i4.GetAudioImpl());
+    gh.lazySingleton<_i5.RefreshServices>(() => _i6.RefreshImpl());
     gh.factory<_i7.HomeBloc>(() => _i7.HomeBloc(
-          gh<_i5.DownloadsServices>(),
-          gh<_i3.DeleteServices>(),
+          gh<_i3.GetAudioServices>(),
+          gh<_i5.RefreshServices>(),
         ));
     return this;
   }

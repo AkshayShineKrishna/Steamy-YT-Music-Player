@@ -18,45 +18,45 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String youtubeUrl) getDownloads,
+    required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
-    required TResult Function() deleteDirectory,
+    required TResult Function() refreshServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String youtubeUrl)? getDownloads,
+    TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
-    TResult? Function()? deleteDirectory,
+    TResult? Function()? refreshServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String youtubeUrl)? getDownloads,
+    TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
-    TResult Function()? deleteDirectory,
+    TResult Function()? refreshServer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloads value) getDownloads,
+    required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
-    required TResult Function(_deleteDirectory value) deleteDirectory,
+    required TResult Function(_RefreshServer value) refreshServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloads value)? getDownloads,
+    TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
-    TResult? Function(_deleteDirectory value)? deleteDirectory,
+    TResult? Function(_RefreshServer value)? refreshServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloads value)? getDownloads,
+    TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
-    TResult Function(_deleteDirectory value)? deleteDirectory,
+    TResult Function(_RefreshServer value)? refreshServer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,20 +80,20 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$_GetDownloadsCopyWith<$Res> {
-  factory _$$_GetDownloadsCopyWith(
-          _$_GetDownloads value, $Res Function(_$_GetDownloads) then) =
-      __$$_GetDownloadsCopyWithImpl<$Res>;
+abstract class _$$_GetAudioCopyWith<$Res> {
+  factory _$$_GetAudioCopyWith(
+          _$_GetAudio value, $Res Function(_$_GetAudio) then) =
+      __$$_GetAudioCopyWithImpl<$Res>;
   @useResult
   $Res call({String youtubeUrl});
 }
 
 /// @nodoc
-class __$$_GetDownloadsCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_GetDownloads>
-    implements _$$_GetDownloadsCopyWith<$Res> {
-  __$$_GetDownloadsCopyWithImpl(
-      _$_GetDownloads _value, $Res Function(_$_GetDownloads) _then)
+class __$$_GetAudioCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetAudio>
+    implements _$$_GetAudioCopyWith<$Res> {
+  __$$_GetAudioCopyWithImpl(
+      _$_GetAudio _value, $Res Function(_$_GetAudio) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_GetDownloadsCopyWithImpl<$Res>
   $Res call({
     Object? youtubeUrl = null,
   }) {
-    return _then(_$_GetDownloads(
+    return _then(_$_GetAudio(
       youtubeUrl: null == youtubeUrl
           ? _value.youtubeUrl
           : youtubeUrl // ignore: cast_nullable_to_non_nullable
@@ -112,22 +112,22 @@ class __$$_GetDownloadsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetDownloads implements _GetDownloads {
-  const _$_GetDownloads({required this.youtubeUrl});
+class _$_GetAudio implements _GetAudio {
+  const _$_GetAudio({required this.youtubeUrl});
 
   @override
   final String youtubeUrl;
 
   @override
   String toString() {
-    return 'HomeEvent.getDownloads(youtubeUrl: $youtubeUrl)';
+    return 'HomeEvent.getAudio(youtubeUrl: $youtubeUrl)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetDownloads &&
+            other is _$_GetAudio &&
             (identical(other.youtubeUrl, youtubeUrl) ||
                 other.youtubeUrl == youtubeUrl));
   }
@@ -138,39 +138,39 @@ class _$_GetDownloads implements _GetDownloads {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetDownloadsCopyWith<_$_GetDownloads> get copyWith =>
-      __$$_GetDownloadsCopyWithImpl<_$_GetDownloads>(this, _$identity);
+  _$$_GetAudioCopyWith<_$_GetAudio> get copyWith =>
+      __$$_GetAudioCopyWithImpl<_$_GetAudio>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String youtubeUrl) getDownloads,
+    required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
-    required TResult Function() deleteDirectory,
+    required TResult Function() refreshServer,
   }) {
-    return getDownloads(youtubeUrl);
+    return getAudio(youtubeUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String youtubeUrl)? getDownloads,
+    TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
-    TResult? Function()? deleteDirectory,
+    TResult? Function()? refreshServer,
   }) {
-    return getDownloads?.call(youtubeUrl);
+    return getAudio?.call(youtubeUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String youtubeUrl)? getDownloads,
+    TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
-    TResult Function()? deleteDirectory,
+    TResult Function()? refreshServer,
     required TResult orElse(),
   }) {
-    if (getDownloads != null) {
-      return getDownloads(youtubeUrl);
+    if (getAudio != null) {
+      return getAudio(youtubeUrl);
     }
     return orElse();
   }
@@ -178,45 +178,44 @@ class _$_GetDownloads implements _GetDownloads {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloads value) getDownloads,
+    required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
-    required TResult Function(_deleteDirectory value) deleteDirectory,
+    required TResult Function(_RefreshServer value) refreshServer,
   }) {
-    return getDownloads(this);
+    return getAudio(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloads value)? getDownloads,
+    TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
-    TResult? Function(_deleteDirectory value)? deleteDirectory,
+    TResult? Function(_RefreshServer value)? refreshServer,
   }) {
-    return getDownloads?.call(this);
+    return getAudio?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloads value)? getDownloads,
+    TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
-    TResult Function(_deleteDirectory value)? deleteDirectory,
+    TResult Function(_RefreshServer value)? refreshServer,
     required TResult orElse(),
   }) {
-    if (getDownloads != null) {
-      return getDownloads(this);
+    if (getAudio != null) {
+      return getAudio(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetDownloads implements HomeEvent {
-  const factory _GetDownloads({required final String youtubeUrl}) =
-      _$_GetDownloads;
+abstract class _GetAudio implements HomeEvent {
+  const factory _GetAudio({required final String youtubeUrl}) = _$_GetAudio;
 
   String get youtubeUrl;
   @JsonKey(ignore: true)
-  _$$_GetDownloadsCopyWith<_$_GetDownloads> get copyWith =>
+  _$$_GetAudioCopyWith<_$_GetAudio> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -258,9 +257,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String youtubeUrl) getDownloads,
+    required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
-    required TResult Function() deleteDirectory,
+    required TResult Function() refreshServer,
   }) {
     return initialize();
   }
@@ -268,9 +267,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String youtubeUrl)? getDownloads,
+    TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
-    TResult? Function()? deleteDirectory,
+    TResult? Function()? refreshServer,
   }) {
     return initialize?.call();
   }
@@ -278,9 +277,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String youtubeUrl)? getDownloads,
+    TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
-    TResult Function()? deleteDirectory,
+    TResult Function()? refreshServer,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -292,9 +291,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloads value) getDownloads,
+    required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
-    required TResult Function(_deleteDirectory value) deleteDirectory,
+    required TResult Function(_RefreshServer value) refreshServer,
   }) {
     return initialize(this);
   }
@@ -302,9 +301,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloads value)? getDownloads,
+    TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
-    TResult? Function(_deleteDirectory value)? deleteDirectory,
+    TResult? Function(_RefreshServer value)? refreshServer,
   }) {
     return initialize?.call(this);
   }
@@ -312,9 +311,9 @@ class _$_Initialize implements _Initialize {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloads value)? getDownloads,
+    TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
-    TResult Function(_deleteDirectory value)? deleteDirectory,
+    TResult Function(_RefreshServer value)? refreshServer,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -329,35 +328,35 @@ abstract class _Initialize implements HomeEvent {
 }
 
 /// @nodoc
-abstract class _$$_deleteDirectoryCopyWith<$Res> {
-  factory _$$_deleteDirectoryCopyWith(
-          _$_deleteDirectory value, $Res Function(_$_deleteDirectory) then) =
-      __$$_deleteDirectoryCopyWithImpl<$Res>;
+abstract class _$$_RefreshServerCopyWith<$Res> {
+  factory _$$_RefreshServerCopyWith(
+          _$_RefreshServer value, $Res Function(_$_RefreshServer) then) =
+      __$$_RefreshServerCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_deleteDirectoryCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_deleteDirectory>
-    implements _$$_deleteDirectoryCopyWith<$Res> {
-  __$$_deleteDirectoryCopyWithImpl(
-      _$_deleteDirectory _value, $Res Function(_$_deleteDirectory) _then)
+class __$$_RefreshServerCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_RefreshServer>
+    implements _$$_RefreshServerCopyWith<$Res> {
+  __$$_RefreshServerCopyWithImpl(
+      _$_RefreshServer _value, $Res Function(_$_RefreshServer) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_deleteDirectory implements _deleteDirectory {
-  const _$_deleteDirectory();
+class _$_RefreshServer implements _RefreshServer {
+  const _$_RefreshServer();
 
   @override
   String toString() {
-    return 'HomeEvent.deleteDirectory()';
+    return 'HomeEvent.refreshServer()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_deleteDirectory);
+        (other.runtimeType == runtimeType && other is _$_RefreshServer);
   }
 
   @override
@@ -366,33 +365,33 @@ class _$_deleteDirectory implements _deleteDirectory {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String youtubeUrl) getDownloads,
+    required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
-    required TResult Function() deleteDirectory,
+    required TResult Function() refreshServer,
   }) {
-    return deleteDirectory();
+    return refreshServer();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String youtubeUrl)? getDownloads,
+    TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
-    TResult? Function()? deleteDirectory,
+    TResult? Function()? refreshServer,
   }) {
-    return deleteDirectory?.call();
+    return refreshServer?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String youtubeUrl)? getDownloads,
+    TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
-    TResult Function()? deleteDirectory,
+    TResult Function()? refreshServer,
     required TResult orElse(),
   }) {
-    if (deleteDirectory != null) {
-      return deleteDirectory();
+    if (refreshServer != null) {
+      return refreshServer();
     }
     return orElse();
   }
@@ -400,40 +399,40 @@ class _$_deleteDirectory implements _deleteDirectory {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloads value) getDownloads,
+    required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
-    required TResult Function(_deleteDirectory value) deleteDirectory,
+    required TResult Function(_RefreshServer value) refreshServer,
   }) {
-    return deleteDirectory(this);
+    return refreshServer(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloads value)? getDownloads,
+    TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
-    TResult? Function(_deleteDirectory value)? deleteDirectory,
+    TResult? Function(_RefreshServer value)? refreshServer,
   }) {
-    return deleteDirectory?.call(this);
+    return refreshServer?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloads value)? getDownloads,
+    TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
-    TResult Function(_deleteDirectory value)? deleteDirectory,
+    TResult Function(_RefreshServer value)? refreshServer,
     required TResult orElse(),
   }) {
-    if (deleteDirectory != null) {
-      return deleteDirectory(this);
+    if (refreshServer != null) {
+      return refreshServer(this);
     }
     return orElse();
   }
 }
 
-abstract class _deleteDirectory implements HomeEvent {
-  const factory _deleteDirectory() = _$_deleteDirectory;
+abstract class _RefreshServer implements HomeEvent {
+  const factory _RefreshServer() = _$_RefreshServer;
 }
 
 /// @nodoc

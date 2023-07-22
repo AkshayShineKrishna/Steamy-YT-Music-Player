@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'delete_response.g.dart';
+part 'refresh_response.g.dart';
 
 @JsonSerializable()
-class DeleteResponse {
+class RefreshResponse {
   @JsonKey(name: 'message')
   String? message;
   @JsonKey(name: 'result')
@@ -13,11 +13,11 @@ class DeleteResponse {
   @JsonKey(name: 'total_files')
   int? total;
 
-  DeleteResponse({this.message, this.result,this.deleted,this.total});
+  RefreshResponse({this.message, this.result,this.deleted,this.total});
 
-  factory DeleteResponse.fromJson(Map<String, dynamic> json) {
-    return _$DeleteResponseFromJson(json);
+  factory RefreshResponse.fromJson(Map<String, dynamic> json) {
+    return _$RefreshResponseFromJson(json);
   }
 
-  Map<String, dynamic> toJson() => _$DeleteResponseToJson(this);
+  Map<String, dynamic> toJson() => _$RefreshResponseToJson(this);
 }

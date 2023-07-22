@@ -4,9 +4,9 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:steamy/domain/core/failure/main_failure.dart';
-import 'package:steamy/domain/delete%20directory/deleteservices.dart';
-import 'package:steamy/domain/downloads/Model/downloads_response.dart';
-import 'package:steamy/domain/downloads/downloadsservices.dart';
+import 'package:steamy/domain/refresh/refreshservices.dart';
+import 'package:steamy/domain/get_audio/Model/get_audio_response.dart';
+import 'package:steamy/domain/get_audio/get_audio_services.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';
@@ -14,11 +14,11 @@ part 'home_bloc.freezed.dart';
 
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  final DownloadsServices _downloadsServices;
-  final DeleteServices _deleteServices;
-  HomeBloc(this._downloadsServices, this._deleteServices)
+  final GetAudioServices _getAudioServices;
+  final RefreshServices _refreshServices;
+  HomeBloc(this._getAudioServices, this._refreshServices)
       : super(HomeState.initial()) {
-    on<_GetDownloads>((event, emit) async {
+    on<_GetAudio>((event, emit) async {
       emit(const HomeState(
         responseResult: [],
         isLoading: true,
@@ -26,14 +26,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       ));
 
       final result =
-          await _downloadsServices.getDownloads(youtubeUrl: event.youtubeUrl);
+          await _getAudioServices.getAudio(youtubeUrl: event.youtubeUrl);
       result.fold((MainFailure failure) {
         emit(const HomeState(
           responseResult: [],
           isLoading: false,
           isError: true,
         ));
-      }, (DownloadsResponse success) {
+      }, (GetAudioResponse success) {
         log(success.result.toString());
         emit(HomeState(
           responseResult: success.result,
@@ -49,8 +49,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isError: false,
       ));
     });
-    on<_deleteDirectory>((event, emit) async {
-      final result = await _deleteServices.deleteDirectory();
+    on<_RefreshServer>((event, emit) async {
+      final result = await _refreshServices.refreshServer();
       log(result.toString());
     });
   }

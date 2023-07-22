@@ -1,19 +1,19 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'downloads_response.g.dart';
+part 'get_audio_response.g.dart';
 
 @JsonSerializable()
-class DownloadsResponse {
+class GetAudioResponse {
   @JsonKey(name: 'result')
   List<ResultData> result;
 
-  DownloadsResponse({this.result = const []});
+  GetAudioResponse({this.result = const []});
 
-  factory DownloadsResponse.fromJson(Map<String, dynamic> json) {
-    return _$DownloadsResponseFromJson(json);
+  factory GetAudioResponse.fromJson(Map<String, dynamic> json) {
+    return _$GetAudioResponseFromJson(json);
   }
 
-  Map<String, dynamic> toJson() => _$DownloadsResponseToJson(this);
+  Map<String, dynamic> toJson() => _$GetAudioResponseToJson(this);
 }
 
 @JsonSerializable()
