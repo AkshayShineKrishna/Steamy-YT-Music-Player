@@ -22,7 +22,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.deleteDirectory());
+      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.refreshServer());
     });
     return Scaffold(
       backgroundColor: Colors.deepPurple[700],
@@ -54,6 +54,10 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   Future<void> splashScreen() async {
     await Future.delayed(const Duration(seconds: 2));
+    _navigate();
+  }
+
+  void _navigate() {
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => MyHomePage()));
   }
