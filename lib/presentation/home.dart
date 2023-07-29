@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
@@ -39,6 +40,7 @@ class MyHomePage extends StatelessWidget {
             BlocBuilder<HomeBloc, HomeState>(
               builder: (context, state) {
                 if (state.responseResult.isNotEmpty) {
+                  log(state.responseResult.toString());
                   return DefaultBottomContainer(
                       widget: AudioPlayerWidget(
                     title: state.responseResult.first.title!,

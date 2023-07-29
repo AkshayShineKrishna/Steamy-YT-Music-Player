@@ -20,6 +20,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       : super(HomeState.initial()) {
     on<_GetAudio>((event, emit) async {
       emit(const HomeState(
+        currentArt: null,
         responseResult: [],
         isLoading: true,
         isError: false,
@@ -29,6 +30,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           await _getAudioServices.getAudio(youtubeUrl: event.youtubeUrl);
       result.fold((MainFailure failure) {
         emit(const HomeState(
+          currentArt: null,
           responseResult: [],
           isLoading: false,
           isError: true,
@@ -36,6 +38,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }, (GetAudioResponse success) {
         log(success.result.toString());
         emit(HomeState(
+          currentArt: null,
           responseResult: success.result,
           isLoading: false,
           isError: false,
@@ -44,6 +47,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     });
     on<_Initialize>((event, emit) async {
       emit(const HomeState(
+        currentArt: null,
         responseResult: [],
         isLoading: false,
         isError: false,
@@ -52,6 +56,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<_RefreshServer>((event, emit) async {
       final result = await _refreshServices.refreshServer();
       log(result.toString());
+    });
+    on<_GetArtUri>((event, emit) async {
+      emit(state.copyWith(currentArt: event.artUri));
+      log(state.currentArt.toString());
     });
   }
 }

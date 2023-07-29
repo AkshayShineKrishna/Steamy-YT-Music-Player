@@ -1,8 +1,12 @@
+import 'dart:developer';
+
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:steamy/application/bloc/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/position%20data/model/positiondata.dart';
 import 'controlswidget.dart';
@@ -46,12 +50,21 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
     super.initState();
     _audioPlayer = AudioPlayer();
     _init();
+    _audioPlayer.sequenceStateStream.listen((sequenceState) {
+      // Get the current MediaItem from the sequenceState
+      final mediaItem = sequenceState?.currentSource?.tag as MediaItem?;
+
+      if (mediaItem != null) {
+        // Call your method here with the current MediaItem
+        _onSongChange(mediaItem);
+      }
+    });
   }
 
   Future<void> _init() async {
     const String serverIp = ApiEndpoints.stream;
     final String ytUrl = widget.url;
-    final _playlist = ConcatenatingAudioSource(
+    final playlist = ConcatenatingAudioSource(
       children: [
         AudioSource.uri(
             Uri.parse(
@@ -65,7 +78,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                     'https://img.youtube.com/vi/${widget.videoId}/0.jpg')))
       ],
     );
-    await _audioPlayer.setAudioSource(_playlist);
+    await _audioPlayer.setAudioSource(playlist);
   }
 
   @override
@@ -100,8 +113,8 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
           ),
           Text(
             widget.artist,
-            style:
-                (TextStyle(fontWeight: FontWeight.w600, color: Colors.black54)),
+            style: (const TextStyle(
+                fontWeight: FontWeight.w600, color: Colors.black54)),
           ),
           kHeight,
           StreamBuilder<PositionData>(
@@ -117,9 +130,15 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                   onSeek: _audioPlayer.seek,
                 );
               }),
-          ControlsWidget(audioPlayer: _audioPlayer,url: widget.url),
+          ControlsWidget(audioPlayer: _audioPlayer, url: widget.url),
         ],
       ),
     );
+  }
+
+  void _onSongChange(MediaItem mediaItem) {
+    log('Current MediaItem: ${mediaItem.artUri}');
+    BlocProvider.of<HomeBloc>(context).add(HomeEvent.getArtUri(artUri: mediaItem.artUri.toString()));
+    // Add your logic here
   }
 }

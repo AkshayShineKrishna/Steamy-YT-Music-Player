@@ -21,6 +21,7 @@ mixin _$HomeEvent {
     required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
     required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$HomeEvent {
     TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$HomeEvent {
     TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
     TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$HomeEvent {
     required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$HomeEvent {
     TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$HomeEvent {
     TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
     required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
   }) {
     return getAudio(youtubeUrl);
   }
@@ -157,6 +164,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
   }) {
     return getAudio?.call(youtubeUrl);
   }
@@ -167,6 +175,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
     TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -181,6 +190,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
   }) {
     return getAudio(this);
   }
@@ -191,6 +201,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
   }) {
     return getAudio?.call(this);
   }
@@ -201,6 +212,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -260,6 +272,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
     required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
   }) {
     return initialize();
   }
@@ -270,6 +283,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
   }) {
     return initialize?.call();
   }
@@ -280,6 +294,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
     TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -294,6 +309,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
   }) {
     return initialize(this);
   }
@@ -304,6 +320,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
   }) {
     return initialize?.call(this);
   }
@@ -314,6 +331,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -368,6 +386,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function(String youtubeUrl) getAudio,
     required TResult Function() initialize,
     required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
   }) {
     return refreshServer();
   }
@@ -378,6 +397,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function(String youtubeUrl)? getAudio,
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
   }) {
     return refreshServer?.call();
   }
@@ -388,6 +408,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function(String youtubeUrl)? getAudio,
     TResult Function()? initialize,
     TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -402,6 +423,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function(_GetAudio value) getAudio,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
   }) {
     return refreshServer(this);
   }
@@ -412,6 +434,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function(_GetAudio value)? getAudio,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
   }) {
     return refreshServer?.call(this);
   }
@@ -422,6 +445,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function(_GetAudio value)? getAudio,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -436,10 +460,156 @@ abstract class _RefreshServer implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetArtUriCopyWith<$Res> {
+  factory _$$_GetArtUriCopyWith(
+          _$_GetArtUri value, $Res Function(_$_GetArtUri) then) =
+      __$$_GetArtUriCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? artUri});
+}
+
+/// @nodoc
+class __$$_GetArtUriCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetArtUri>
+    implements _$$_GetArtUriCopyWith<$Res> {
+  __$$_GetArtUriCopyWithImpl(
+      _$_GetArtUri _value, $Res Function(_$_GetArtUri) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? artUri = freezed,
+  }) {
+    return _then(_$_GetArtUri(
+      artUri: freezed == artUri
+          ? _value.artUri
+          : artUri // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetArtUri implements _GetArtUri {
+  const _$_GetArtUri({required this.artUri});
+
+  @override
+  final String? artUri;
+
+  @override
+  String toString() {
+    return 'HomeEvent.getArtUri(artUri: $artUri)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetArtUri &&
+            (identical(other.artUri, artUri) || other.artUri == artUri));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, artUri);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetArtUriCopyWith<_$_GetArtUri> get copyWith =>
+      __$$_GetArtUriCopyWithImpl<_$_GetArtUri>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String youtubeUrl) getAudio,
+    required TResult Function() initialize,
+    required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
+  }) {
+    return getArtUri(artUri);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String youtubeUrl)? getAudio,
+    TResult? Function()? initialize,
+    TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
+  }) {
+    return getArtUri?.call(artUri);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String youtubeUrl)? getAudio,
+    TResult Function()? initialize,
+    TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
+    required TResult orElse(),
+  }) {
+    if (getArtUri != null) {
+      return getArtUri(artUri);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAudio value) getAudio,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
+  }) {
+    return getArtUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetAudio value)? getAudio,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
+  }) {
+    return getArtUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAudio value)? getAudio,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
+    required TResult orElse(),
+  }) {
+    if (getArtUri != null) {
+      return getArtUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetArtUri implements HomeEvent {
+  const factory _GetArtUri({required final String? artUri}) = _$_GetArtUri;
+
+  String? get artUri;
+  @JsonKey(ignore: true)
+  _$$_GetArtUriCopyWith<_$_GetArtUri> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   List<ResultData> get responseResult => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
+  String? get currentArt => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -451,7 +621,11 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({List<ResultData> responseResult, bool isLoading, bool isError});
+  $Res call(
+      {List<ResultData> responseResult,
+      bool isLoading,
+      bool isError,
+      String? currentArt});
 }
 
 /// @nodoc
@@ -470,6 +644,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? responseResult = null,
     Object? isLoading = null,
     Object? isError = null,
+    Object? currentArt = freezed,
   }) {
     return _then(_value.copyWith(
       responseResult: null == responseResult
@@ -484,6 +659,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentArt: freezed == currentArt
+          ? _value.currentArt
+          : currentArt // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -495,7 +674,11 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$$_HomeStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<ResultData> responseResult, bool isLoading, bool isError});
+  $Res call(
+      {List<ResultData> responseResult,
+      bool isLoading,
+      bool isError,
+      String? currentArt});
 }
 
 /// @nodoc
@@ -512,6 +695,7 @@ class __$$_HomeStateCopyWithImpl<$Res>
     Object? responseResult = null,
     Object? isLoading = null,
     Object? isError = null,
+    Object? currentArt = freezed,
   }) {
     return _then(_$_HomeState(
       responseResult: null == responseResult
@@ -526,6 +710,10 @@ class __$$_HomeStateCopyWithImpl<$Res>
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentArt: freezed == currentArt
+          ? _value.currentArt
+          : currentArt // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -536,7 +724,8 @@ class _$_HomeState implements _HomeState {
   const _$_HomeState(
       {required final List<ResultData> responseResult,
       required this.isLoading,
-      required this.isError})
+      required this.isError,
+      required this.currentArt})
       : _responseResult = responseResult;
 
   final List<ResultData> _responseResult;
@@ -551,10 +740,12 @@ class _$_HomeState implements _HomeState {
   final bool isLoading;
   @override
   final bool isError;
+  @override
+  final String? currentArt;
 
   @override
   String toString() {
-    return 'HomeState(responseResult: $responseResult, isLoading: $isLoading, isError: $isError)';
+    return 'HomeState(responseResult: $responseResult, isLoading: $isLoading, isError: $isError, currentArt: $currentArt)';
   }
 
   @override
@@ -566,12 +757,18 @@ class _$_HomeState implements _HomeState {
                 .equals(other._responseResult, _responseResult) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
-            (identical(other.isError, isError) || other.isError == isError));
+            (identical(other.isError, isError) || other.isError == isError) &&
+            (identical(other.currentArt, currentArt) ||
+                other.currentArt == currentArt));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_responseResult), isLoading, isError);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_responseResult),
+      isLoading,
+      isError,
+      currentArt);
 
   @JsonKey(ignore: true)
   @override
@@ -584,7 +781,8 @@ abstract class _HomeState implements HomeState {
   const factory _HomeState(
       {required final List<ResultData> responseResult,
       required final bool isLoading,
-      required final bool isError}) = _$_HomeState;
+      required final bool isError,
+      required final String? currentArt}) = _$_HomeState;
 
   @override
   List<ResultData> get responseResult;
@@ -592,6 +790,8 @@ abstract class _HomeState implements HomeState {
   bool get isLoading;
   @override
   bool get isError;
+  @override
+  String? get currentArt;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

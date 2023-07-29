@@ -7,4 +7,5 @@ class HomeEvent with _$HomeEvent {
   }) = _GetAudio;
   const factory HomeEvent.initialize() = _Initialize;
   const factory HomeEvent.refreshServer() = _RefreshServer;
+  const factory HomeEvent.getArtUri({required String? artUri}) = _GetArtUri;
 }
