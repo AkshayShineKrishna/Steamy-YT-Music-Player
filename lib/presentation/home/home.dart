@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
-import 'package:steamy/presentation/widgets/TextFieldWidget.dart';
-import 'package:steamy/presentation/widgets/audioplayerwidget.dart';
+import 'package:steamy/presentation/home/widgets/defaultbottomcontainer.dart';
+import 'package:steamy/presentation/home/widgets/defaultimagewidget.dart';
+import 'package:steamy/presentation/home/widgets/defaultmessage.dart';
+import 'package:steamy/presentation/home/widgets/TextFieldWidget.dart';
+import 'package:steamy/presentation/home/widgets/audioplayerwidget.dart';
 import 'package:steamy/presentation/widgets/bottom_nav.dart';
-import 'package:steamy/presentation/widgets/defaultbottomcontainer.dart';
-import 'package:steamy/presentation/widgets/defaultimagewidget.dart';
-import 'package:steamy/presentation/widgets/defaultmessage.dart';
-import 'package:steamy/presentation/widgets/titlewidget.dart';
+import 'package:steamy/presentation/home/widgets/titlewidget.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});

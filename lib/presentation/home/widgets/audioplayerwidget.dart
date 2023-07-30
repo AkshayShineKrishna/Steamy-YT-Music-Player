@@ -8,7 +8,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:steamy/application/bloc/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/position%20data/model/positiondata.dart';
-import 'controlswidget.dart';
+import 'package:steamy/presentation/home/widgets/controlswidget.dart';
 import 'package:steamy/domain/core/apiendpoints.dart';
 
 class AudioPlayerWidget extends StatefulWidget {

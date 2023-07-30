@@ -15,7 +15,7 @@ import 'package:steamy/application/bloc/home_bloc.dart' as _i7;
 import 'package:steamy/domain/get_audio/get_audio_services.dart' as _i3;
 import 'package:steamy/domain/refresh/refreshservices.dart' as _i5;
 import 'package:steamy/infrastructure/get_audio_impl.dart' as _i4;
-import 'package:steamy/infrastructure/refreshImpl.dart' as _i6;
+import 'package:steamy/infrastructure/refresh_impl.dart' as _i6;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
