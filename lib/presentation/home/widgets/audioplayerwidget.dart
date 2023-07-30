@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -139,6 +138,5 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   void _onSongChange(MediaItem mediaItem) {
     log('Current MediaItem: ${mediaItem.artUri}');
     BlocProvider.of<HomeBloc>(context).add(HomeEvent.getArtUri(artUri: mediaItem.artUri.toString()));
-    // Add your logic here
   }
 }
