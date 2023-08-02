@@ -8,8 +8,8 @@ import 'package:steamy/presentation/home/widgets/defaultimagewidget.dart';
 import 'package:steamy/presentation/home/widgets/defaultmessage.dart';
 import 'package:steamy/presentation/home/widgets/TextFieldWidget.dart';
 import 'package:steamy/presentation/home/widgets/audioplayerwidget.dart';
-import 'package:steamy/presentation/widgets/bottom_nav.dart';
 import 'package:steamy/presentation/home/widgets/titlewidget.dart';
+import 'package:steamy/presentation/widgets/app_bar_widget.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -18,6 +18,14 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(50),
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          leading: const AppBarWidget(),
+        ),
+      ),
       extendBody: true,
       backgroundColor: Colors.deepPurple[700],
       resizeToAvoidBottomInset: false, // Set resizeToAvoidBottomInset to false
@@ -25,18 +33,16 @@ class MyHomePage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: SafeArea(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  kHeight,
-                  const TitleWidget(),
-                  kHeightMedium,
-                  TextFieldWidget(urlController: urlController),
-                  kHeightLarge,
-                  const DefaultImageWidget(),
-                ],
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // kHeight,
+                const TitleWidget(),
+                kHeight,
+                TextFieldWidget(urlController: urlController),
+                kHeightMedium,
+                const DefaultImageWidget(),
+              ],
             ),
           ),
           Positioned(
@@ -63,7 +69,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const BottomNavWidget(),
+      // bottomNavigationBar: const BottomNavWidget(),
     );
   }
 }

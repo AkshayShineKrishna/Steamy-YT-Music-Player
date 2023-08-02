@@ -137,6 +137,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
 
   void _onSongChange(MediaItem mediaItem) {
     log('Current MediaItem: ${mediaItem.artUri}');
-    BlocProvider.of<HomeBloc>(context).add(HomeEvent.getArtUri(artUri: mediaItem.artUri.toString()));
+    BlocProvider.of<HomeBloc>(context)
+        .add(HomeEvent.getArtUri(artUri: mediaItem.artUri.toString()));
   }
 }
