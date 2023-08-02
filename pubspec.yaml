@@ -55,6 +55,7 @@ dependencies:
   shimmer: ^3.0.0
   google_nav_bar: ^5.0.6
   line_icons: ^2.0.3
+  flutter_zoom_drawer: ^3.1.1
 
 dev_dependencies:
   flutter_test:
