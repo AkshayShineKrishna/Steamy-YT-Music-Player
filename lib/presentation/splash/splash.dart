@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/core/constants.dart';
-import 'package:steamy/presentation/home/home.dart';
+import 'package:steamy/presentation/main/main_page.dart';
 
 import '../../application/bloc/home_bloc.dart';
 
@@ -59,6 +59,6 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   void _navigate() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MyHomePage()));
+        context, MaterialPageRoute(builder: (context) => ScreenMain()));
   }
 }
