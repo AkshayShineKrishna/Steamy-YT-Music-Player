@@ -55,6 +55,7 @@ dependencies:
   shimmer: ^3.0.0
   line_icons: ^2.0.3
   flutter_zoom_drawer: ^3.1.1
+  hive_flutter: ^1.1.0
 
 dev_dependencies:
   flutter_test:
