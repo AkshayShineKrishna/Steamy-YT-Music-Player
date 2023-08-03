@@ -22,6 +22,7 @@ mixin _$HomeEvent {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeEvent {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$HomeEvent {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$HomeEvent {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$HomeEvent {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$HomeEvent {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +160,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
   }) {
     return getAudio(youtubeUrl);
   }
@@ -165,6 +172,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
   }) {
     return getAudio?.call(youtubeUrl);
   }
@@ -176,6 +184,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -191,6 +200,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
   }) {
     return getAudio(this);
   }
@@ -202,6 +212,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
   }) {
     return getAudio?.call(this);
   }
@@ -213,6 +224,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -273,6 +285,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
   }) {
     return initialize();
   }
@@ -284,6 +297,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
   }) {
     return initialize?.call();
   }
@@ -295,6 +309,7 @@ class _$_Initialize implements _Initialize {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -310,6 +325,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
   }) {
     return initialize(this);
   }
@@ -321,6 +337,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
   }) {
     return initialize?.call(this);
   }
@@ -332,6 +349,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -387,6 +405,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
   }) {
     return refreshServer();
   }
@@ -398,6 +417,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
   }) {
     return refreshServer?.call();
   }
@@ -409,6 +429,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -424,6 +445,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
   }) {
     return refreshServer(this);
   }
@@ -435,6 +457,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
   }) {
     return refreshServer?.call(this);
   }
@@ -446,6 +469,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -527,6 +551,7 @@ class _$_GetArtUri implements _GetArtUri {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
   }) {
     return getArtUri(artUri);
   }
@@ -538,6 +563,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
   }) {
     return getArtUri?.call(artUri);
   }
@@ -549,6 +575,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
     required TResult orElse(),
   }) {
     if (getArtUri != null) {
@@ -564,6 +591,7 @@ class _$_GetArtUri implements _GetArtUri {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
   }) {
     return getArtUri(this);
   }
@@ -575,6 +603,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
   }) {
     return getArtUri?.call(this);
   }
@@ -586,6 +615,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
     required TResult orElse(),
   }) {
     if (getArtUri != null) {
@@ -602,6 +632,125 @@ abstract class _GetArtUri implements HomeEvent {
   @JsonKey(ignore: true)
   _$$_GetArtUriCopyWith<_$_GetArtUri> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_RebuildCopyWith<$Res> {
+  factory _$$_RebuildCopyWith(
+          _$_Rebuild value, $Res Function(_$_Rebuild) then) =
+      __$$_RebuildCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_RebuildCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_Rebuild>
+    implements _$$_RebuildCopyWith<$Res> {
+  __$$_RebuildCopyWithImpl(_$_Rebuild _value, $Res Function(_$_Rebuild) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Rebuild implements _Rebuild {
+  const _$_Rebuild();
+
+  @override
+  String toString() {
+    return 'HomeEvent.rebuild()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Rebuild);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String youtubeUrl) getAudio,
+    required TResult Function() initialize,
+    required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
+    required TResult Function() rebuild,
+  }) {
+    return rebuild();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String youtubeUrl)? getAudio,
+    TResult? Function()? initialize,
+    TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
+    TResult? Function()? rebuild,
+  }) {
+    return rebuild?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String youtubeUrl)? getAudio,
+    TResult Function()? initialize,
+    TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
+    TResult Function()? rebuild,
+    required TResult orElse(),
+  }) {
+    if (rebuild != null) {
+      return rebuild();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAudio value) getAudio,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_Rebuild value) rebuild,
+  }) {
+    return rebuild(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetAudio value)? getAudio,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_Rebuild value)? rebuild,
+  }) {
+    return rebuild?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAudio value)? getAudio,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_Rebuild value)? rebuild,
+    required TResult orElse(),
+  }) {
+    if (rebuild != null) {
+      return rebuild(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Rebuild implements HomeEvent {
+  const factory _Rebuild() = _$_Rebuild;
 }
 
 /// @nodoc

@@ -1,7 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:steamy/application/bloc/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/menu_item/menu_data.dart';
 import 'package:steamy/domain/menu_item/menu_item.dart';
@@ -23,7 +25,11 @@ class _ScreenMainState extends State<ScreenMain> {
   @override
   Widget build(BuildContext context) {
     log(currentItem.title);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.rebuild());
+    });
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.deepPurple,
       body: ZoomDrawer(
         mainScreen: getScreen(),

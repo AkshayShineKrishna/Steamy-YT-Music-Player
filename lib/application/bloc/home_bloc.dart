@@ -61,5 +61,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       emit(state.copyWith(currentArt: event.artUri));
       log(state.currentArt.toString());
     });
+    on<_Rebuild>((event, emit) {
+      emit(state.copyWith(
+          currentArt: null,
+          isError: false,
+          isLoading: false,
+          responseResult: []));
+    });
   }
 }
