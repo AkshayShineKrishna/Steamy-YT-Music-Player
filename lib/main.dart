@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:steamy/application/home/home_bloc.dart';
+import 'package:steamy/application/menu/menu_bloc.dart';
 import 'package:steamy/presentation/splash/splash.dart';
 import 'core/di/injectable.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: ((ctx) => getIt<HomeBloc>())),
+        BlocProvider(create: ((ctx) => getIt<MenuBloc>())),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

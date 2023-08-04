@@ -59,6 +59,6 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   void _navigate() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => ScreenMain()));
+        context, MaterialPageRoute(builder: (context) => const ScreenMain()));
   }
 }
