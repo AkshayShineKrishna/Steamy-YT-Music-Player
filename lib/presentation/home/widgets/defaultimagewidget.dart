@@ -54,7 +54,7 @@ class DefaultImageWidget extends StatelessWidget {
                 placeholder: (context, url) => Shimmer.fromColors(
                   direction:
                       ShimmerDirection.ltr, // Set the direction of the shimmer
-                  baseColor: Colors.purple[900]!,
+                  baseColor: kdeepPurpleHighlight,
                   highlightColor: Colors.deepPurple,
                   child: Container(
                     width: size.width * 0.9,
@@ -71,8 +71,7 @@ class DefaultImageWidget extends StatelessWidget {
                   height: size.width * 0.5,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    color: Colors
-                        .purple[900], // Placeholder color in case of an error
+                    color: kdeepPurpleHighlight, // Placeholder color in case of an error
                   ),
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +79,7 @@ class DefaultImageWidget extends StatelessWidget {
                       Icon(
                         Icons.error,
                         size: 50,
-                        color: Colors.white,
+                        color: kWhiteFont,
                       ),
                       kHeight,
                       Text(
@@ -90,7 +89,7 @@ class DefaultImageWidget extends StatelessWidget {
                       ),
                       Text('Try Reloading 🥲',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: kWhiteFont,
                               fontWeight: FontWeight.w400)),
                     ],
                   ), // Widget to display in case of an error

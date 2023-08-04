@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       extendBody: true,
-      backgroundColor: Colors.deepPurple[700],
+      backgroundColor: kdeepPurpleBackground,
       resizeToAvoidBottomInset: false, // Set resizeToAvoidBottomInset to false
       body: Stack(
         children: [
@@ -71,7 +71,6 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
-      // bottomNavigationBar: const BottomNavWidget(),
     );
   }
 }
