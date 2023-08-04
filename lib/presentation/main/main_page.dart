@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/application/menu/menu_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/menu_item/menu_data.dart';
@@ -29,11 +28,13 @@ class ScreenMain extends StatelessWidget {
                 currentItem: currentItem,
                 onSelectedItem: (item) {
                   BlocProvider.of<MenuBloc>(context)
-                  .add(MenuEvent.getCurrentItem(menuDataItem: item));
+                      .add(MenuEvent.getCurrentItem(menuDataItem: item));
                   ZoomDrawer.of(context)!.close();
                 },
               );
             }),
+            duration: const Duration(milliseconds: 260),
+            openDragSensitivity: 350,
             drawerShadowsBackgroundColor: kWhite,
             menuScreenWidth: 500,
             showShadow: true,
