@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/presentation/widgets/app_bar_widget.dart';
 
 class ScreenAbout extends StatelessWidget {
@@ -6,6 +8,9 @@ class ScreenAbout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+    });
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),

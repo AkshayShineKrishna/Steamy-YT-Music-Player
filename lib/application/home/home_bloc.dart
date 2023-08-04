@@ -18,6 +18,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final RefreshServices _refreshServices;
   HomeBloc(this._getAudioServices, this._refreshServices)
       : super(HomeState.initial()) {
+        
     on<_GetAudio>((event, emit) async {
       emit(const HomeState(
         currentArt: null,
@@ -45,6 +46,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         ));
       });
     });
+
     on<_Initialize>((event, emit) async {
       emit(const HomeState(
         currentArt: null,
@@ -53,20 +55,16 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isError: false,
       ));
     });
+
     on<_RefreshServer>((event, emit) async {
       final result = await _refreshServices.refreshServer();
       log(result.toString());
     });
+
     on<_GetArtUri>((event, emit) async {
       emit(state.copyWith(currentArt: event.artUri));
       log(state.currentArt.toString());
     });
-    on<_Rebuild>((event, emit) {
-      emit(state.copyWith(
-          currentArt: null,
-          isError: false,
-          isLoading: false,
-          responseResult: []));
-    });
+    
   }
 }

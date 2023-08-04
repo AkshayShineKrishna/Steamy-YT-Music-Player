@@ -8,5 +8,4 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.initialize() = _Initialize;
   const factory HomeEvent.refreshServer() = _RefreshServer;
   const factory HomeEvent.getArtUri({required String? artUri}) = _GetArtUri;
-  const factory HomeEvent.rebuild() = _Rebuild;
 }

@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/widgets/app_bar_widget.dart';
 
@@ -9,6 +11,9 @@ class ScreenPLaylist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+    });
     return Scaffold(
         backgroundColor: Colors.deepPurple[700],
         appBar: PreferredSize(

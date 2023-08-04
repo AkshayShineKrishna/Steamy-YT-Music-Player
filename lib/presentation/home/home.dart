@@ -17,6 +17,9 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+    });
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
