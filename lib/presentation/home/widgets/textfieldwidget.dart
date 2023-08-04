@@ -1,10 +1,9 @@
 import 'dart:developer';
-
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:steamy/application/bloc/home_bloc.dart';
+import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 
 class TextFieldWidget extends StatelessWidget {

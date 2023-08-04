@@ -11,7 +11,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:steamy/application/bloc/home_bloc.dart' as _i7;
+import 'package:steamy/application/home/home_bloc.dart' as _i7;
 import 'package:steamy/domain/get_audio/get_audio_services.dart' as _i3;
 import 'package:steamy/domain/refresh/refreshservices.dart' as _i5;
 import 'package:steamy/infrastructure/get_audio_impl.dart' as _i4;

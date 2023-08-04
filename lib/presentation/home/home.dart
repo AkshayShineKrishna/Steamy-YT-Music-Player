@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:steamy/application/bloc/home_bloc.dart';
+import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/home/widgets/defaultbottomcontainer.dart';
 import 'package:steamy/presentation/home/widgets/defaultimagewidget.dart';

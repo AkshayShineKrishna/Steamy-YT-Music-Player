@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:steamy/application/bloc/home_bloc.dart';
+import 'package:steamy/application/home/home_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/position%20data/model/positiondata.dart';
 import 'package:steamy/presentation/home/widgets/controlswidget.dart';

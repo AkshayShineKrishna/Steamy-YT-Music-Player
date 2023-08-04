@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/main/main_page.dart';
 
-import '../../application/bloc/home_bloc.dart';
+import '../../application/home/home_bloc.dart';
 
 class ScreenSplash extends StatefulWidget {
   const ScreenSplash({super.key});
