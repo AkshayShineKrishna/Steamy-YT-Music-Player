@@ -15,7 +15,7 @@ class ScreenPLaylist extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
     });
     return Scaffold(
-        backgroundColor: Colors.deepPurple[700],
+        backgroundColor: kdeepPurpleBackground,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(50),
           child: AppBar(
@@ -31,13 +31,24 @@ class ScreenPLaylist extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Playlist 🤍',
-                  style: TextStyle(
-                    color: kWhite,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 35,
-                  ),
+                Row(
+                  children: [
+                    const Text(
+                      'Playlist 🤍',
+                      style: TextStyle(
+                        color: kWhite,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 35,
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.add,
+                          color: kWhite,
+                          size: 35,
+                        ))
+                  ],
                 ),
                 kHeight,
                 Expanded(
@@ -52,7 +63,7 @@ class ScreenPLaylist extends StatelessWidget {
                                 height: 150,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.deepPurpleAccent,
+                                  color: kDeepPurpleAccent,
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
