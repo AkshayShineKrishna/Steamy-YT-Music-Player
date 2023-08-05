@@ -47,7 +47,7 @@ class DefaultImageWidget extends StatelessWidget {
                       color: Colors.black.withOpacity(0.4), // Shadow color
                       spreadRadius: 2, // Spread radius
                       blurRadius: 10, // Blur radius
-                      offset: Offset(0, 3), // Shadow offset
+                      offset: const Offset(0, 3), // Shadow offset
                     ),
                   ],
                 ),
