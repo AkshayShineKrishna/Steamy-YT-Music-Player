@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:steamy/core/constants.dart';
+import 'package:steamy/presentation/playlist/widgets/create_playlist.dart';
 
 class TitleBarWidget extends StatelessWidget {
   const TitleBarWidget({
@@ -20,10 +22,12 @@ class TitleBarWidget extends StatelessWidget {
           ),
         ),
         IconButton(
-            highlightColor: kDeepPurpleAccent,
-            splashColor: Colors.white,
             tooltip: 'Add Playlist',
-            onPressed: () {},
+            onPressed: () {
+              HapticFeedback.lightImpact();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CreatePlaylist()));
+            },
             icon: const Icon(
               Icons.add,
               color: kWhite,
