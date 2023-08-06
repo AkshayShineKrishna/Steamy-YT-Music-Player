@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
+import 'package:steamy/presentation/playlist/widgets/new_playlist.dart';
 
 class CreatePlaylist extends StatelessWidget {
   CreatePlaylist({super.key});
@@ -92,6 +93,12 @@ class CreatePlaylist extends StatelessWidget {
                       onPressed: () {
                         if (state.currentStatusFlag) {
                           _createAction();
+                          //         Navigator.push(context,
+                          // MaterialPageRoute(builder: (context) => const PlaylistBody()));
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => PlaylistBody()),
+                          );
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -110,7 +117,5 @@ class CreatePlaylist extends StatelessWidget {
     );
   }
 
-  void _createAction() {
-    log("pressed");
-  }
+  void _createAction() {}
 }
