@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,9 +31,6 @@ class CreatePlaylist extends StatelessWidget {
             ),
             kHeightMedium,
             TextField(
-              // onTapOutside: (event) {
-              //   FocusScope.of(context).unfocus();
-              // },
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   BlocProvider.of<PlaylistBloc>(context)
@@ -92,12 +88,9 @@ class CreatePlaylist extends StatelessWidget {
                     return ElevatedButton(
                       onPressed: () {
                         if (state.currentStatusFlag) {
-                          _createAction();
-                          //         Navigator.push(context,
-                          // MaterialPageRoute(builder: (context) => const PlaylistBody()));
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                                builder: (context) => PlaylistBody()),
+                                builder: (context) => const PlaylistBody()),
                           );
                         }
                       },
@@ -117,5 +110,4 @@ class CreatePlaylist extends StatelessWidget {
     );
   }
 
-  void _createAction() {}
 }
