@@ -3,10 +3,11 @@ import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/main/main_page.dart';
 
 class PlaylistBody extends StatelessWidget {
-  const PlaylistBody({super.key});
+  final String playlistName;
+  final String? desc, category;
+  const PlaylistBody(
+      {super.key, required this.playlistName, this.desc, this.category});
 
-  final String desc =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -45,25 +46,15 @@ class PlaylistBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
-                  'Playlist Name',
-                  style: TextStyle(
+                Text(
+                  playlistName,
+                  style: const TextStyle(
                     color: kWhiteFont,
                     fontWeight: FontWeight.w700,
                     fontSize: 35,
                   ),
                 ),
-                kHeight,
-                Text(
-                  desc,
-                  style: const TextStyle(
-                    color: kWhiteFont,
-                  ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.left,
-                ),
-                kHeight,
+                _descSelector(),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -81,19 +72,21 @@ class PlaylistBody extends StatelessWidget {
                       style: TextStyle(color: kWhiteFont, fontSize: 16),
                     ),
                     const Spacer(),
-                    Container(
-                      height: 40,
-                      width: 100,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: kWhite),
-                      child: const Center(
-                          child: Text(
-                        "😎 Mood",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16),
-                      )),
-                    )
+                    category != null
+                        ? Container(
+                            height: 40,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: kWhite),
+                            child: Center(
+                                child: Text(
+                              category ?? '',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            )),
+                          )
+                        : const SizedBox()
                   ],
                 ),
                 kHeight,
@@ -121,6 +114,22 @@ class PlaylistBody extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _descSelector() {
+    if (desc != null) {
+      return Text(
+        desc ?? ' ',
+        style: const TextStyle(
+          color: kWhiteFont,
+        ),
+        maxLines: 3,
+        overflow: TextOverflow.ellipsis,
+        textAlign: TextAlign.left,
+      );
+    } else {
+      return const SizedBox();
+    }
   }
 }
 
