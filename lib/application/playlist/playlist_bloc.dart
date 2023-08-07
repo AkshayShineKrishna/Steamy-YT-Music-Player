@@ -20,7 +20,21 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
     });
 
     on<_Initialize>(((event, emit) => emit(
-          state.copyWith(currentStatusFlag: false),
+          state.copyWith(
+            currentStatusFlag: false,
+            currentSelectedCategory: -1,
+          ),
         )));
+
+    on<_GetSelectedCategory>(
+      (event, emit) {
+        if (state.currentSelectedCategory == event.currentCategoryIndex) {
+          emit(state.copyWith(currentSelectedCategory: -1));
+          return;
+        }
+        emit(state.copyWith(
+            currentSelectedCategory: event.currentCategoryIndex));
+      },
+    );
   }
 }

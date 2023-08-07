@@ -19,18 +19,21 @@ mixin _$PlaylistEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     required TResult orElse(),
   }) =>
@@ -38,18 +41,21 @@ mixin _$PlaylistEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     required TResult orElse(),
   }) =>
@@ -139,6 +145,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
   }) {
     return toggleStatusFlag(flag);
@@ -148,6 +155,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
   }) {
     return toggleStatusFlag?.call(flag);
@@ -157,6 +165,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     required TResult orElse(),
   }) {
@@ -170,6 +179,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
   }) {
     return toggleStatusFlag(this);
@@ -179,6 +189,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
   }) {
     return toggleStatusFlag?.call(this);
@@ -188,6 +199,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     required TResult orElse(),
   }) {
@@ -205,6 +217,148 @@ abstract class _ToggleStatusFlag implements PlaylistEvent {
   bool get flag;
   @JsonKey(ignore: true)
   _$$_ToggleStatusFlagCopyWith<_$_ToggleStatusFlag> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetSelectedCategoryCopyWith<$Res> {
+  factory _$$_GetSelectedCategoryCopyWith(_$_GetSelectedCategory value,
+          $Res Function(_$_GetSelectedCategory) then) =
+      __$$_GetSelectedCategoryCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int currentCategoryIndex});
+}
+
+/// @nodoc
+class __$$_GetSelectedCategoryCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_GetSelectedCategory>
+    implements _$$_GetSelectedCategoryCopyWith<$Res> {
+  __$$_GetSelectedCategoryCopyWithImpl(_$_GetSelectedCategory _value,
+      $Res Function(_$_GetSelectedCategory) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentCategoryIndex = null,
+  }) {
+    return _then(_$_GetSelectedCategory(
+      currentCategoryIndex: null == currentCategoryIndex
+          ? _value.currentCategoryIndex
+          : currentCategoryIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetSelectedCategory implements _GetSelectedCategory {
+  const _$_GetSelectedCategory({required this.currentCategoryIndex});
+
+  @override
+  final int currentCategoryIndex;
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.getSelctedCategory(currentCategoryIndex: $currentCategoryIndex)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetSelectedCategory &&
+            (identical(other.currentCategoryIndex, currentCategoryIndex) ||
+                other.currentCategoryIndex == currentCategoryIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currentCategoryIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetSelectedCategoryCopyWith<_$_GetSelectedCategory> get copyWith =>
+      __$$_GetSelectedCategoryCopyWithImpl<_$_GetSelectedCategory>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+  }) {
+    return getSelctedCategory(currentCategoryIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+  }) {
+    return getSelctedCategory?.call(currentCategoryIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    required TResult orElse(),
+  }) {
+    if (getSelctedCategory != null) {
+      return getSelctedCategory(currentCategoryIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+  }) {
+    return getSelctedCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+  }) {
+    return getSelctedCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    required TResult orElse(),
+  }) {
+    if (getSelctedCategory != null) {
+      return getSelctedCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetSelectedCategory implements PlaylistEvent {
+  const factory _GetSelectedCategory(
+      {required final int currentCategoryIndex}) = _$_GetSelectedCategory;
+
+  int get currentCategoryIndex;
+  @JsonKey(ignore: true)
+  _$$_GetSelectedCategoryCopyWith<_$_GetSelectedCategory> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -247,6 +401,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
   }) {
     return initialize();
@@ -256,6 +411,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
   }) {
     return initialize?.call();
@@ -265,6 +421,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     required TResult orElse(),
   }) {
@@ -278,6 +435,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
   }) {
     return initialize(this);
@@ -287,6 +445,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
   }) {
     return initialize?.call(this);
@@ -296,6 +455,7 @@ class _$_Initialize implements _Initialize {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     required TResult orElse(),
   }) {
@@ -313,6 +473,7 @@ abstract class _Initialize implements PlaylistEvent {
 /// @nodoc
 mixin _$PlaylistState {
   bool get currentStatusFlag => throw _privateConstructorUsedError;
+  int get currentSelectedCategory => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PlaylistStateCopyWith<PlaylistState> get copyWith =>
@@ -325,7 +486,7 @@ abstract class $PlaylistStateCopyWith<$Res> {
           PlaylistState value, $Res Function(PlaylistState) then) =
       _$PlaylistStateCopyWithImpl<$Res, PlaylistState>;
   @useResult
-  $Res call({bool currentStatusFlag});
+  $Res call({bool currentStatusFlag, int currentSelectedCategory});
 }
 
 /// @nodoc
@@ -342,12 +503,17 @@ class _$PlaylistStateCopyWithImpl<$Res, $Val extends PlaylistState>
   @override
   $Res call({
     Object? currentStatusFlag = null,
+    Object? currentSelectedCategory = null,
   }) {
     return _then(_value.copyWith(
       currentStatusFlag: null == currentStatusFlag
           ? _value.currentStatusFlag
           : currentStatusFlag // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentSelectedCategory: null == currentSelectedCategory
+          ? _value.currentSelectedCategory
+          : currentSelectedCategory // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -360,7 +526,7 @@ abstract class _$$_PlaylistStateCopyWith<$Res>
       __$$_PlaylistStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool currentStatusFlag});
+  $Res call({bool currentStatusFlag, int currentSelectedCategory});
 }
 
 /// @nodoc
@@ -375,12 +541,17 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentStatusFlag = null,
+    Object? currentSelectedCategory = null,
   }) {
     return _then(_$_PlaylistState(
       currentStatusFlag: null == currentStatusFlag
           ? _value.currentStatusFlag
           : currentStatusFlag // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentSelectedCategory: null == currentSelectedCategory
+          ? _value.currentSelectedCategory
+          : currentSelectedCategory // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -388,14 +559,17 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PlaylistState implements _PlaylistState {
-  const _$_PlaylistState({required this.currentStatusFlag});
+  const _$_PlaylistState(
+      {required this.currentStatusFlag, required this.currentSelectedCategory});
 
   @override
   final bool currentStatusFlag;
+  @override
+  final int currentSelectedCategory;
 
   @override
   String toString() {
-    return 'PlaylistState(currentStatusFlag: $currentStatusFlag)';
+    return 'PlaylistState(currentStatusFlag: $currentStatusFlag, currentSelectedCategory: $currentSelectedCategory)';
   }
 
   @override
@@ -404,11 +578,15 @@ class _$_PlaylistState implements _PlaylistState {
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistState &&
             (identical(other.currentStatusFlag, currentStatusFlag) ||
-                other.currentStatusFlag == currentStatusFlag));
+                other.currentStatusFlag == currentStatusFlag) &&
+            (identical(
+                    other.currentSelectedCategory, currentSelectedCategory) ||
+                other.currentSelectedCategory == currentSelectedCategory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentStatusFlag);
+  int get hashCode =>
+      Object.hash(runtimeType, currentStatusFlag, currentSelectedCategory);
 
   @JsonKey(ignore: true)
   @override
@@ -418,11 +596,14 @@ class _$_PlaylistState implements _PlaylistState {
 }
 
 abstract class _PlaylistState implements PlaylistState {
-  const factory _PlaylistState({required final bool currentStatusFlag}) =
-      _$_PlaylistState;
+  const factory _PlaylistState(
+      {required final bool currentStatusFlag,
+      required final int currentSelectedCategory}) = _$_PlaylistState;
 
   @override
   bool get currentStatusFlag;
+  @override
+  int get currentSelectedCategory;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistStateCopyWith<_$_PlaylistState> get copyWith =>

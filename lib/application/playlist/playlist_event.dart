@@ -6,5 +6,8 @@ class PlaylistEvent with _$PlaylistEvent {
     required bool flag,
   }) = _ToggleStatusFlag;
 
+  const factory PlaylistEvent.getSelctedCategory({
+    required int currentCategoryIndex,
+  }) = _GetSelectedCategory;
   const factory PlaylistEvent.initialize() = _Initialize;
 }
