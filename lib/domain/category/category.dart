@@ -1,7 +1,6 @@
 class Category {
   static const List<String> categoryList = [
-    "😎 Mood",
-    "🎧 Focus",
+    "🎯 Focus",
     "💖 Romantic",
     "🎉 Party",
     "🌙 Chill",
@@ -9,13 +8,14 @@ class Category {
     "🏋️‍♀️ Workout",
     "🧡 Feel-Good",
     "📚 Study",
-    "🎼 Lofi",
+    "🎵 Lofi",
     "🎸 Rock",
     "🎤 Pop",
     "🕺 Dance",
     "🎵 Acoustic",
     "💤 Sleep",
     "🎶 Classics",
-    "🌨️ Rainy Day"
+    "🌨️ Rainy Day",
+    "🌠 Dreamy",
   ];
 }
