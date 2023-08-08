@@ -1,7 +1,8 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:steamy/core/constants.dart';
+import 'package:steamy/domain/category/category.dart';
+import 'package:steamy/presentation/playlist/widgets/category_container.dart';
 
 class PlaylistCardWidget extends StatelessWidget {
   const PlaylistCardWidget({super.key});
@@ -19,14 +20,11 @@ class PlaylistCardWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
-            mainAxisAlignment:
-                MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                mainAxisAlignment:
-                    MainAxisAlignment.start,
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     'Liked Songs',
@@ -41,7 +39,14 @@ class PlaylistCardWidget extends StatelessWidget {
                         color: kWhite.withOpacity(0.8),
                         fontSize: 15,
                         fontWeight: FontWeight.w600),
-                  )
+                  ),
+                  const Spacer(),
+                  CategoryContainer(
+                    category: Category.categoryList[15],
+                    containerColor: kWhite.withOpacity(0.2),
+                    textColor: kWhiteFont,
+                  ),
+                  kHeight
                 ],
               ),
               Stack(
@@ -60,8 +65,7 @@ class PlaylistCardWidget extends StatelessWidget {
                     right: 5,
                     child: CircleAvatar(
                       radius: 30,
-                      backgroundColor:
-                          kWhite.withOpacity(0.9),
+                      backgroundColor: kWhite.withOpacity(0.9),
                       child: IconButton(
                         icon: const Icon(
                           Icons.play_arrow_rounded,
@@ -80,4 +84,3 @@ class PlaylistCardWidget extends StatelessWidget {
     );
   }
 }
-
