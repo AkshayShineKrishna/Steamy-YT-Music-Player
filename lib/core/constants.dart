@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const kWhite = Colors.white;
 const kWhiteFont = Colors.white;
+const kBlackFont = Colors.black;
 final kdeepPurpleBackground = Colors.deepPurple[700]!;
 final kdeepPurpleHighlight = Colors.deepPurple[900]!;
 const kDeepPurpleAccent = Colors.deepPurpleAccent;
