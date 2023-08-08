@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/main/main_page.dart';
+import 'package:steamy/presentation/playlist/widgets/category_container.dart';
+import 'package:steamy/presentation/playlist/widgets/new_playlist_message.dart';
 
 class PlaylistBody extends StatelessWidget {
   final String playlistName;
@@ -53,6 +55,8 @@ class PlaylistBody extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontSize: 35,
                   ),
+                  maxLines: 4,
+                  overflow: TextOverflow.fade,
                 ),
                 _descSelector(),
                 Row(
@@ -73,19 +77,7 @@ class PlaylistBody extends StatelessWidget {
                     ),
                     const Spacer(),
                     category != null
-                        ? Container(
-                            height: 40,
-                            width: 100,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: kWhite),
-                            child: Center(
-                                child: Text(
-                              category ?? '',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16),
-                            )),
-                          )
+                        ? CategoryContainer(category: category)
                         : const SizedBox()
                   ],
                 ),
@@ -93,21 +85,7 @@ class PlaylistBody extends StatelessWidget {
                 const Divider(
                   color: Colors.deepPurple,
                 ),
-                Expanded(
-                    child: ListView.separated(
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      color: Colors.deepPurpleAccent,
-                      child: const ListTile(
-                        title: Text('Song Name'),
-                        subtitle: Text('Duration'),
-                      ),
-                    );
-                  },
-                  itemCount: 10,
-                  separatorBuilder: (context, index) => kHeight,
-                ))
+                const Expanded(child: NewPlaylistMessage(),)
               ],
             ),
           ),
@@ -118,33 +96,44 @@ class PlaylistBody extends StatelessWidget {
 
   Widget _descSelector() {
     if (desc != null) {
-      return Text(
-        desc ?? ' ',
-        style: const TextStyle(
-          color: kWhiteFont,
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Text(
+          desc ?? '',
+          style: const TextStyle(
+            color: kWhiteFont,
+          ),
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.left,
         ),
-        maxLines: 3,
-        overflow: TextOverflow.ellipsis,
-        textAlign: TextAlign.left,
       );
     } else {
-      return const SizedBox();
+      return kHeight;
     }
   }
 }
 
-class NewPlaylistMessage extends StatelessWidget {
-  const NewPlaylistMessage({
+class SongListWidget extends StatelessWidget {
+  const SongListWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Let the playlist games begin!',
-        style: TextStyle(color: kWhiteFont, fontSize: 20),
+    return ListView.separated(
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+    return Container(
+      color: Colors.deepPurpleAccent,
+      child: const ListTile(
+        title: Text('Song Name'),
+        subtitle: Text('Duration'),
       ),
+    );
+      },
+      itemCount: 10,
+      separatorBuilder: (context, index) => kHeight,
     );
   }
 }
