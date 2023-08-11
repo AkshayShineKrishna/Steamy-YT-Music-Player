@@ -8,11 +8,17 @@ class NewPlaylistMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Let the playlist games begin!',
-        style: TextStyle(color: kWhiteFont, fontSize: 20),
-      ),
-    );
+    return Center(
+        child: Container(
+      height: 380,
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/playlist_message.png'))),
+    )
+        // Text(
+        //   'Let the playlist games begin!',
+        //   style: TextStyle(color: kWhiteFont, fontSize: 20),
+        // ),
+        );
   }
 }

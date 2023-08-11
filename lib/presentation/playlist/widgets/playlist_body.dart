@@ -34,18 +34,22 @@ class PlaylistBody extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  stops: const [
-                    0.6,
-                    0.7,
-                  ],
+                  // stops: const [
+                  //   0.6,
+                  //   0.7,
+                  // ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    kdeepPurpleBackground,
-                    // Colors.transparent,
-                    kdeepPurpleHighlight,
-                    // kDeepPurpleAccent
-                  ])),
+                Colors.deepPurple,
+                Colors.deepPurple[600]!,
+                kdeepPurpleBackground,
+                Colors.deepPurple[800]!,
+                Colors.deepPurple[900]!
+                // Colors.transparent,
+                // kdeepPurpleHighlight,
+                // kDeepPurpleAccent
+              ])),
           child: SafeArea(
             child: Stack(
               children: [
@@ -93,11 +97,15 @@ class PlaylistBody extends StatelessWidget {
                         ],
                       ),
                       kHeight,
-                      const Divider(
-                        color: Colors.deepPurple,
+                      Divider(
+                        color: Colors.deepPurple[400]!.withOpacity(0.5),
+                        thickness: 2.5,
                       ),
                       const Expanded(
-                        child: SongListWidget(),
+                        child:
+                            //image
+                            // NewPlaylistMessage(),
+                            SongListWidget(),
                       )
                     ],
                   ),
@@ -151,49 +159,14 @@ class SongListWidget extends StatelessWidget {
     return ListView.separated(
       shrinkWrap: true,
       itemBuilder: (context, index) {
+        // display number of songs after the last tile 
         if (index == 19) {
-          return Column(
+          return const Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.deepPurpleAccent.withOpacity(0.4),
-                ),
-                child: ListTile(
-                  leading: Container(
-                    width: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        image: const DecorationImage(
-                            image: NetworkImage(
-                                'https://img.youtube.com/vi/wvIPYXXFTuE/0.jpg'),
-                            fit: BoxFit.cover)),
-                  ),
-                  title: const Text(
-                    'Selena Gomez & Rauw Alejandro - Baila Conmigo (Premio Lo Nuestro 2021)',
-                    style: TextStyle(
-                        color: kWhiteFont,
-                        fontSize: 18,
-                        overflow: TextOverflow.fade,
-                        fontWeight: FontWeight.w500),
-                    maxLines: 2,
-                  ),
-                  subtitle: const Text(
-                    'Duration • Artist',
-                    style: TextStyle(color: kWhiteFont, fontSize: 13),
-                    maxLines: 2,
-                  ),
-                  trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.more_vert_rounded,
-                        color: kWhite,
-                      )),
-                ),
-              ),
+              SongTile(),
               kHeightMedium,
-              const Text(
-                'Total Songs : 2s0',
+              Text(
+                'Total Songs : 20',
                 style: TextStyle(
                   color: kWhiteFont,
                 ),
@@ -202,46 +175,57 @@ class SongListWidget extends StatelessWidget {
             ],
           );
         }
-        return Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.deepPurpleAccent.withOpacity(0.4),
-          ),
-          child: ListTile(
-            leading: Container(
-              width: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  image: const DecorationImage(
-                      image: NetworkImage(
-                          'https://img.youtube.com/vi/wvIPYXXFTuE/0.jpg'),
-                      fit: BoxFit.cover)),
-            ),
-            title: const Text(
-              'Selena Gomez & Rauw Alejandro - Baila Conmigo (Premio Lo Nuestro 2021)',
-              style: TextStyle(
-                  color: kWhiteFont,
-                  fontSize: 18,
-                  overflow: TextOverflow.fade,
-                  fontWeight: FontWeight.w500),
-              maxLines: 2,
-            ),
-            subtitle: const Text(
-              'Duration • Artist',
-              style: TextStyle(color: kWhiteFont, fontSize: 13),
-              maxLines: 2,
-            ),
-            trailing: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.more_vert_rounded,
-                  color: kWhite,
-                )),
-          ),
-        );
+        return const SongTile();
       },
       itemCount: 20,
       separatorBuilder: (context, index) => kHeight,
+    );
+  }
+}
+
+class SongTile extends StatelessWidget {
+  const SongTile({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.deepPurpleAccent.withOpacity(0.4),
+      ),
+      child: ListTile(
+        leading: Container(
+          width: 100,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              image: const DecorationImage(
+                  image: NetworkImage(
+                      'https://img.youtube.com/vi/wvIPYXXFTuE/0.jpg'),
+                  fit: BoxFit.cover)),
+        ),
+        title: const Text(
+          'Selena Gomez & Rauw Alejandro - Baila Conmigo (Premio Lo Nuestro 2021)',
+          style: TextStyle(
+              color: kWhiteFont,
+              fontSize: 18,
+              overflow: TextOverflow.fade,
+              fontWeight: FontWeight.w500),
+          maxLines: 2,
+        ),
+        subtitle: const Text(
+          'Duration • Artist',
+          style: TextStyle(color: kWhiteFont, fontSize: 13),
+          maxLines: 2,
+        ),
+        // trailing: IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(
+        //       Icons.more_vert_rounded,
+        //       color: kWhite,
+        //     )),
+      ),
     );
   }
 }
