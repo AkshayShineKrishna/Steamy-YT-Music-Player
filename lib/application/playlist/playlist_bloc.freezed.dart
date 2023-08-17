@@ -21,6 +21,7 @@ mixin _$PlaylistEvent {
     required TResult Function(bool flag) toggleStatusFlag,
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
+    required TResult Function() test,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$PlaylistEvent {
     TResult? Function(bool flag)? toggleStatusFlag,
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
+    TResult? Function()? test,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$PlaylistEvent {
     TResult Function(bool flag)? toggleStatusFlag,
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
+    TResult Function()? test,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$PlaylistEvent {
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$PlaylistEvent {
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$PlaylistEvent {
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     required TResult Function(bool flag) toggleStatusFlag,
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
+    required TResult Function() test,
   }) {
     return toggleStatusFlag(flag);
   }
@@ -157,6 +164,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(bool flag)? toggleStatusFlag,
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
+    TResult? Function()? test,
   }) {
     return toggleStatusFlag?.call(flag);
   }
@@ -167,6 +175,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(bool flag)? toggleStatusFlag,
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
+    TResult Function()? test,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -181,6 +190,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
   }) {
     return toggleStatusFlag(this);
   }
@@ -191,6 +201,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
   }) {
     return toggleStatusFlag?.call(this);
   }
@@ -201,6 +212,7 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -289,6 +301,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     required TResult Function(bool flag) toggleStatusFlag,
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
+    required TResult Function() test,
   }) {
     return getSelctedCategory(currentCategoryIndex);
   }
@@ -299,6 +312,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(bool flag)? toggleStatusFlag,
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
+    TResult? Function()? test,
   }) {
     return getSelctedCategory?.call(currentCategoryIndex);
   }
@@ -309,6 +323,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(bool flag)? toggleStatusFlag,
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
+    TResult Function()? test,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -323,6 +338,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
   }) {
     return getSelctedCategory(this);
   }
@@ -333,6 +349,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
   }) {
     return getSelctedCategory?.call(this);
   }
@@ -343,6 +360,7 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -403,6 +421,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(bool flag) toggleStatusFlag,
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
+    required TResult Function() test,
   }) {
     return initialize();
   }
@@ -413,6 +432,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(bool flag)? toggleStatusFlag,
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
+    TResult? Function()? test,
   }) {
     return initialize?.call();
   }
@@ -423,6 +443,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(bool flag)? toggleStatusFlag,
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
+    TResult Function()? test,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -437,6 +458,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
   }) {
     return initialize(this);
   }
@@ -447,6 +469,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
   }) {
     return initialize?.call(this);
   }
@@ -457,6 +480,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -471,9 +495,122 @@ abstract class _Initialize implements PlaylistEvent {
 }
 
 /// @nodoc
+abstract class _$$_TestCopyWith<$Res> {
+  factory _$$_TestCopyWith(_$_Test value, $Res Function(_$_Test) then) =
+      __$$_TestCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_TestCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_Test>
+    implements _$$_TestCopyWith<$Res> {
+  __$$_TestCopyWithImpl(_$_Test _value, $Res Function(_$_Test) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Test implements _Test {
+  const _$_Test();
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.test()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Test);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+  }) {
+    return test();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+  }) {
+    return test?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    required TResult orElse(),
+  }) {
+    if (test != null) {
+      return test();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+  }) {
+    return test(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+  }) {
+    return test?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    required TResult orElse(),
+  }) {
+    if (test != null) {
+      return test(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Test implements PlaylistEvent {
+  const factory _Test() = _$_Test;
+}
+
+/// @nodoc
 mixin _$PlaylistState {
   bool get currentStatusFlag => throw _privateConstructorUsedError;
   int get currentSelectedCategory => throw _privateConstructorUsedError;
+  bool get alertFlag => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PlaylistStateCopyWith<PlaylistState> get copyWith =>
@@ -486,7 +623,8 @@ abstract class $PlaylistStateCopyWith<$Res> {
           PlaylistState value, $Res Function(PlaylistState) then) =
       _$PlaylistStateCopyWithImpl<$Res, PlaylistState>;
   @useResult
-  $Res call({bool currentStatusFlag, int currentSelectedCategory});
+  $Res call(
+      {bool currentStatusFlag, int currentSelectedCategory, bool alertFlag});
 }
 
 /// @nodoc
@@ -504,6 +642,7 @@ class _$PlaylistStateCopyWithImpl<$Res, $Val extends PlaylistState>
   $Res call({
     Object? currentStatusFlag = null,
     Object? currentSelectedCategory = null,
+    Object? alertFlag = null,
   }) {
     return _then(_value.copyWith(
       currentStatusFlag: null == currentStatusFlag
@@ -514,6 +653,10 @@ class _$PlaylistStateCopyWithImpl<$Res, $Val extends PlaylistState>
           ? _value.currentSelectedCategory
           : currentSelectedCategory // ignore: cast_nullable_to_non_nullable
               as int,
+      alertFlag: null == alertFlag
+          ? _value.alertFlag
+          : alertFlag // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -526,7 +669,8 @@ abstract class _$$_PlaylistStateCopyWith<$Res>
       __$$_PlaylistStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool currentStatusFlag, int currentSelectedCategory});
+  $Res call(
+      {bool currentStatusFlag, int currentSelectedCategory, bool alertFlag});
 }
 
 /// @nodoc
@@ -542,6 +686,7 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
   $Res call({
     Object? currentStatusFlag = null,
     Object? currentSelectedCategory = null,
+    Object? alertFlag = null,
   }) {
     return _then(_$_PlaylistState(
       currentStatusFlag: null == currentStatusFlag
@@ -552,6 +697,10 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
           ? _value.currentSelectedCategory
           : currentSelectedCategory // ignore: cast_nullable_to_non_nullable
               as int,
+      alertFlag: null == alertFlag
+          ? _value.alertFlag
+          : alertFlag // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -560,16 +709,20 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
 
 class _$_PlaylistState implements _PlaylistState {
   const _$_PlaylistState(
-      {required this.currentStatusFlag, required this.currentSelectedCategory});
+      {required this.currentStatusFlag,
+      required this.currentSelectedCategory,
+      required this.alertFlag});
 
   @override
   final bool currentStatusFlag;
   @override
   final int currentSelectedCategory;
+  @override
+  final bool alertFlag;
 
   @override
   String toString() {
-    return 'PlaylistState(currentStatusFlag: $currentStatusFlag, currentSelectedCategory: $currentSelectedCategory)';
+    return 'PlaylistState(currentStatusFlag: $currentStatusFlag, currentSelectedCategory: $currentSelectedCategory, alertFlag: $alertFlag)';
   }
 
   @override
@@ -581,12 +734,14 @@ class _$_PlaylistState implements _PlaylistState {
                 other.currentStatusFlag == currentStatusFlag) &&
             (identical(
                     other.currentSelectedCategory, currentSelectedCategory) ||
-                other.currentSelectedCategory == currentSelectedCategory));
+                other.currentSelectedCategory == currentSelectedCategory) &&
+            (identical(other.alertFlag, alertFlag) ||
+                other.alertFlag == alertFlag));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, currentStatusFlag, currentSelectedCategory);
+  int get hashCode => Object.hash(
+      runtimeType, currentStatusFlag, currentSelectedCategory, alertFlag);
 
   @JsonKey(ignore: true)
   @override
@@ -598,12 +753,15 @@ class _$_PlaylistState implements _PlaylistState {
 abstract class _PlaylistState implements PlaylistState {
   const factory _PlaylistState(
       {required final bool currentStatusFlag,
-      required final int currentSelectedCategory}) = _$_PlaylistState;
+      required final int currentSelectedCategory,
+      required final bool alertFlag}) = _$_PlaylistState;
 
   @override
   bool get currentStatusFlag;
   @override
   int get currentSelectedCategory;
+  @override
+  bool get alertFlag;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistStateCopyWith<_$_PlaylistState> get copyWith =>

@@ -10,4 +10,6 @@ class PlaylistEvent with _$PlaylistEvent {
     required int currentCategoryIndex,
   }) = _GetSelectedCategory;
   const factory PlaylistEvent.initialize() = _Initialize;
+
+  const factory PlaylistEvent.test() = _Test;
 }

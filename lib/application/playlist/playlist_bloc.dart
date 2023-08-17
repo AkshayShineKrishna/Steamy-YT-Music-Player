@@ -21,9 +21,9 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
 
     on<_Initialize>(((event, emit) => emit(
           state.copyWith(
-            currentStatusFlag: false,
-            currentSelectedCategory: -1,
-          ),
+              currentStatusFlag: false,
+              currentSelectedCategory: -1,
+              alertFlag: false),
         )));
 
     on<_GetSelectedCategory>(
@@ -34,6 +34,13 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
         }
         emit(state.copyWith(
             currentSelectedCategory: event.currentCategoryIndex));
+      },
+    );
+
+    on<_Test>(
+      (event, emit) {
+        bool flag = state.alertFlag;
+        emit(state.copyWith(alertFlag: !flag));
       },
     );
   }
