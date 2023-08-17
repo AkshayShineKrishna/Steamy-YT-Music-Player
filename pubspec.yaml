@@ -90,8 +90,9 @@ flutter:
      - assets/loading.gif
      - assets/logo.png
      - assets/playlist_message.png
-#     - images/a_dot_burr.jpeg
-#     - images/a_dot_ham.jpeg
+     - assets/playlist.png
+     - assets/playlist_loading.gif
+
    uses-material-design: true
 
   # An image asset can refer to one or more resolution-specific "variants", see
