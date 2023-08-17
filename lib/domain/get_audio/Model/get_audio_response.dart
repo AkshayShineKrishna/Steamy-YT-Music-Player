@@ -26,6 +26,8 @@ class ResultData {
   String? videoId;
   @JsonKey(name: 'channel')
   String? artist;
+  @JsonKey(name: 'duration')
+  String? duration;
 
   ResultData({this.filename, this.title, this.videoId, this.artist});
 
