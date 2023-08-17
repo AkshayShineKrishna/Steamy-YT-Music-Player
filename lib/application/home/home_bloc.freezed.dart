@@ -22,6 +22,7 @@ mixin _$HomeEvent {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeEvent {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$HomeEvent {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$HomeEvent {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$HomeEvent {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$HomeEvent {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +160,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
   }) {
     return getAudio(youtubeUrl);
   }
@@ -165,6 +172,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
   }) {
     return getAudio?.call(youtubeUrl);
   }
@@ -176,6 +184,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -191,6 +200,7 @@ class _$_GetAudio implements _GetAudio {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
   }) {
     return getAudio(this);
   }
@@ -202,6 +212,7 @@ class _$_GetAudio implements _GetAudio {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
   }) {
     return getAudio?.call(this);
   }
@@ -213,6 +224,7 @@ class _$_GetAudio implements _GetAudio {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
     required TResult orElse(),
   }) {
     if (getAudio != null) {
@@ -273,6 +285,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
   }) {
     return initialize();
   }
@@ -284,6 +297,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
   }) {
     return initialize?.call();
   }
@@ -295,6 +309,7 @@ class _$_Initialize implements _Initialize {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -310,6 +325,7 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
   }) {
     return initialize(this);
   }
@@ -321,6 +337,7 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
   }) {
     return initialize?.call(this);
   }
@@ -332,6 +349,7 @@ class _$_Initialize implements _Initialize {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -387,6 +405,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
   }) {
     return refreshServer();
   }
@@ -398,6 +417,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
   }) {
     return refreshServer?.call();
   }
@@ -409,6 +429,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -424,6 +445,7 @@ class _$_RefreshServer implements _RefreshServer {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
   }) {
     return refreshServer(this);
   }
@@ -435,6 +457,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
   }) {
     return refreshServer?.call(this);
   }
@@ -446,6 +469,7 @@ class _$_RefreshServer implements _RefreshServer {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
     required TResult orElse(),
   }) {
     if (refreshServer != null) {
@@ -527,6 +551,7 @@ class _$_GetArtUri implements _GetArtUri {
     required TResult Function() initialize,
     required TResult Function() refreshServer,
     required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
   }) {
     return getArtUri(artUri);
   }
@@ -538,6 +563,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult? Function()? initialize,
     TResult? Function()? refreshServer,
     TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
   }) {
     return getArtUri?.call(artUri);
   }
@@ -549,6 +575,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult Function()? initialize,
     TResult Function()? refreshServer,
     TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
     required TResult orElse(),
   }) {
     if (getArtUri != null) {
@@ -564,6 +591,7 @@ class _$_GetArtUri implements _GetArtUri {
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_RefreshServer value) refreshServer,
     required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
   }) {
     return getArtUri(this);
   }
@@ -575,6 +603,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_RefreshServer value)? refreshServer,
     TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
   }) {
     return getArtUri?.call(this);
   }
@@ -586,6 +615,7 @@ class _$_GetArtUri implements _GetArtUri {
     TResult Function(_Initialize value)? initialize,
     TResult Function(_RefreshServer value)? refreshServer,
     TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
     required TResult orElse(),
   }) {
     if (getArtUri != null) {
@@ -605,11 +635,164 @@ abstract class _GetArtUri implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_ToggleLikeCopyWith<$Res> {
+  factory _$$_ToggleLikeCopyWith(
+          _$_ToggleLike value, $Res Function(_$_ToggleLike) then) =
+      __$$_ToggleLikeCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool likedFlag});
+}
+
+/// @nodoc
+class __$$_ToggleLikeCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_ToggleLike>
+    implements _$$_ToggleLikeCopyWith<$Res> {
+  __$$_ToggleLikeCopyWithImpl(
+      _$_ToggleLike _value, $Res Function(_$_ToggleLike) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? likedFlag = null,
+  }) {
+    return _then(_$_ToggleLike(
+      likedFlag: null == likedFlag
+          ? _value.likedFlag
+          : likedFlag // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ToggleLike implements _ToggleLike {
+  const _$_ToggleLike({required this.likedFlag});
+
+  @override
+  final bool likedFlag;
+
+  @override
+  String toString() {
+    return 'HomeEvent.toggleLike(likedFlag: $likedFlag)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ToggleLike &&
+            (identical(other.likedFlag, likedFlag) ||
+                other.likedFlag == likedFlag));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, likedFlag);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ToggleLikeCopyWith<_$_ToggleLike> get copyWith =>
+      __$$_ToggleLikeCopyWithImpl<_$_ToggleLike>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String youtubeUrl) getAudio,
+    required TResult Function() initialize,
+    required TResult Function() refreshServer,
+    required TResult Function(String? artUri) getArtUri,
+    required TResult Function(bool likedFlag) toggleLike,
+  }) {
+    return toggleLike(likedFlag);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String youtubeUrl)? getAudio,
+    TResult? Function()? initialize,
+    TResult? Function()? refreshServer,
+    TResult? Function(String? artUri)? getArtUri,
+    TResult? Function(bool likedFlag)? toggleLike,
+  }) {
+    return toggleLike?.call(likedFlag);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String youtubeUrl)? getAudio,
+    TResult Function()? initialize,
+    TResult Function()? refreshServer,
+    TResult Function(String? artUri)? getArtUri,
+    TResult Function(bool likedFlag)? toggleLike,
+    required TResult orElse(),
+  }) {
+    if (toggleLike != null) {
+      return toggleLike(likedFlag);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAudio value) getAudio,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_RefreshServer value) refreshServer,
+    required TResult Function(_GetArtUri value) getArtUri,
+    required TResult Function(_ToggleLike value) toggleLike,
+  }) {
+    return toggleLike(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetAudio value)? getAudio,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_RefreshServer value)? refreshServer,
+    TResult? Function(_GetArtUri value)? getArtUri,
+    TResult? Function(_ToggleLike value)? toggleLike,
+  }) {
+    return toggleLike?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAudio value)? getAudio,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_RefreshServer value)? refreshServer,
+    TResult Function(_GetArtUri value)? getArtUri,
+    TResult Function(_ToggleLike value)? toggleLike,
+    required TResult orElse(),
+  }) {
+    if (toggleLike != null) {
+      return toggleLike(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleLike implements HomeEvent {
+  const factory _ToggleLike({required final bool likedFlag}) = _$_ToggleLike;
+
+  bool get likedFlag;
+  @JsonKey(ignore: true)
+  _$$_ToggleLikeCopyWith<_$_ToggleLike> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   List<ResultData> get responseResult => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
   String? get currentArt => throw _privateConstructorUsedError;
+  bool get likedStatus => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -625,7 +808,8 @@ abstract class $HomeStateCopyWith<$Res> {
       {List<ResultData> responseResult,
       bool isLoading,
       bool isError,
-      String? currentArt});
+      String? currentArt,
+      bool likedStatus});
 }
 
 /// @nodoc
@@ -645,6 +829,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? isLoading = null,
     Object? isError = null,
     Object? currentArt = freezed,
+    Object? likedStatus = null,
   }) {
     return _then(_value.copyWith(
       responseResult: null == responseResult
@@ -663,6 +848,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.currentArt
           : currentArt // ignore: cast_nullable_to_non_nullable
               as String?,
+      likedStatus: null == likedStatus
+          ? _value.likedStatus
+          : likedStatus // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -678,7 +867,8 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       {List<ResultData> responseResult,
       bool isLoading,
       bool isError,
-      String? currentArt});
+      String? currentArt,
+      bool likedStatus});
 }
 
 /// @nodoc
@@ -696,6 +886,7 @@ class __$$_HomeStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? isError = null,
     Object? currentArt = freezed,
+    Object? likedStatus = null,
   }) {
     return _then(_$_HomeState(
       responseResult: null == responseResult
@@ -714,6 +905,10 @@ class __$$_HomeStateCopyWithImpl<$Res>
           ? _value.currentArt
           : currentArt // ignore: cast_nullable_to_non_nullable
               as String?,
+      likedStatus: null == likedStatus
+          ? _value.likedStatus
+          : likedStatus // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -725,7 +920,8 @@ class _$_HomeState implements _HomeState {
       {required final List<ResultData> responseResult,
       required this.isLoading,
       required this.isError,
-      required this.currentArt})
+      required this.currentArt,
+      required this.likedStatus})
       : _responseResult = responseResult;
 
   final List<ResultData> _responseResult;
@@ -742,10 +938,12 @@ class _$_HomeState implements _HomeState {
   final bool isError;
   @override
   final String? currentArt;
+  @override
+  final bool likedStatus;
 
   @override
   String toString() {
-    return 'HomeState(responseResult: $responseResult, isLoading: $isLoading, isError: $isError, currentArt: $currentArt)';
+    return 'HomeState(responseResult: $responseResult, isLoading: $isLoading, isError: $isError, currentArt: $currentArt, likedStatus: $likedStatus)';
   }
 
   @override
@@ -759,7 +957,9 @@ class _$_HomeState implements _HomeState {
                 other.isLoading == isLoading) &&
             (identical(other.isError, isError) || other.isError == isError) &&
             (identical(other.currentArt, currentArt) ||
-                other.currentArt == currentArt));
+                other.currentArt == currentArt) &&
+            (identical(other.likedStatus, likedStatus) ||
+                other.likedStatus == likedStatus));
   }
 
   @override
@@ -768,7 +968,8 @@ class _$_HomeState implements _HomeState {
       const DeepCollectionEquality().hash(_responseResult),
       isLoading,
       isError,
-      currentArt);
+      currentArt,
+      likedStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -782,7 +983,8 @@ abstract class _HomeState implements HomeState {
       {required final List<ResultData> responseResult,
       required final bool isLoading,
       required final bool isError,
-      required final String? currentArt}) = _$_HomeState;
+      required final String? currentArt,
+      required final bool likedStatus}) = _$_HomeState;
 
   @override
   List<ResultData> get responseResult;
@@ -792,6 +994,8 @@ abstract class _HomeState implements HomeState {
   bool get isError;
   @override
   String? get currentArt;
+  @override
+  bool get likedStatus;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

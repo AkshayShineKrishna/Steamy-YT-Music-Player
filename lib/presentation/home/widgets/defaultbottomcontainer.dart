@@ -32,10 +32,22 @@ class DefaultBottomContainer extends StatelessWidget {
         BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             if (state.responseResult.isNotEmpty) {
-              return const Positioned(
+              return Positioned(
                 top: 45,
                 right: 20,
-                child: LikeButton(),
+                child: LikeButton(
+                  isLiked: state.likedStatus,
+                  onTap: (bool isLiked) async {
+                    if (!isLiked) {
+                      BlocProvider.of<HomeBloc>(context)
+                          .add(HomeEvent.toggleLike(likedFlag: isLiked));
+                      return true;
+                    }
+                    BlocProvider.of<HomeBloc>(context)
+                        .add(HomeEvent.toggleLike(likedFlag: isLiked));
+                    return false;
+                  },
+                ),
               );
             }
             return kHeight;
