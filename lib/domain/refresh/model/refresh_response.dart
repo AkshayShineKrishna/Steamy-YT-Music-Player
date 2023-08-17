@@ -13,7 +13,7 @@ class RefreshResponse {
   @JsonKey(name: 'total_files')
   int? total;
 
-  RefreshResponse({this.message, this.result,this.deleted,this.total});
+  RefreshResponse({this.message, this.result, this.deleted, this.total});
 
   factory RefreshResponse.fromJson(Map<String, dynamic> json) {
     return _$RefreshResponseFromJson(json);
