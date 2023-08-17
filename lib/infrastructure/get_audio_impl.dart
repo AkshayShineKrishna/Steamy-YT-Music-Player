@@ -16,8 +16,8 @@ class GetAudioImpl implements GetAudioServices {
       {required String youtubeUrl}) async {
     try {
       final formData = FormData.fromMap({'video_url': youtubeUrl});
-      final Response response = await Dio(BaseOptions())
-          .post(ApiEndpoints.getAudio, data: formData);
+      final Response response =
+          await Dio(BaseOptions()).post(ApiEndpoints.getAudio, data: formData);
       if (response.statusCode == 200 || response.statusCode == 201) {
         log(response.data.toString());
         final result = GetAudioResponse.fromJson(response.data);

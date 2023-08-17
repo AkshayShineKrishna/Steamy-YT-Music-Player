@@ -12,8 +12,8 @@ class RefreshImpl implements RefreshServices {
   @override
   Future<Either<MainFailure, RefreshResponse>> refreshServer() async {
     try {
-      final Response response = await Dio(BaseOptions())
-          .post(ApiEndpoints.refresh);
+      final Response response =
+          await Dio(BaseOptions()).post(ApiEndpoints.refresh);
       if (response.statusCode == 200 || response.statusCode == 201) {
         log(response.data.toString());
         final result = RefreshResponse.fromJson(response.data);

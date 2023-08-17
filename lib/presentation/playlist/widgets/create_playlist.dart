@@ -58,25 +58,24 @@ class CreatePlaylist extends StatelessWidget {
 
   ElevatedButton _createButton(PlaylistState state, BuildContext context) {
     return ElevatedButton(
-                    onPressed: () {
-                      if (state.currentStatusFlag) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => PlaylistBody(
-                                    playlistName: _nameController.text.trim(),
-                                    category: _categorySelector(
-                                        state.currentSelectedCategory),
-                                    desc: _descController.text.trim(),
-                                  )),
-                        );
-                      }
-                    },
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: state.currentStatusFlag
-                            ? kWhite
-                            : Colors.transparent),
-                    child: const Text('Create'),
-                  );
+      onPressed: () {
+        if (state.currentStatusFlag) {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+                builder: (context) => PlaylistBody(
+                      playlistName: _nameController.text.trim(),
+                      category:
+                          _categorySelector(state.currentSelectedCategory),
+                      desc: _descController.text.trim(),
+                    )),
+          );
+        }
+      },
+      style: ElevatedButton.styleFrom(
+          backgroundColor:
+              state.currentStatusFlag ? kWhite : Colors.transparent),
+      child: const Text('Create'),
+    );
   }
 
   String? _categorySelector(int selectedIndex) {

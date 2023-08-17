@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:steamy/core/constants.dart';
 
 class CategoryContainer extends StatelessWidget {
-
   final String? category;
   final Color containerColor, textColor;
   const CategoryContainer(
@@ -10,7 +9,6 @@ class CategoryContainer extends StatelessWidget {
       required this.category,
       this.containerColor = kWhite,
       this.textColor = kBlackFont});
-
 
   @override
   Widget build(BuildContext context) {

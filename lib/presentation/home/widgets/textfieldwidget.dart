@@ -66,7 +66,8 @@ class TextFieldWidget extends StatelessWidget {
               BlocProvider.of<HomeBloc>(context)
                   .add(HomeEvent.getAudio(youtubeUrl: url));
             } else {
-              BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+              BlocProvider.of<HomeBloc>(context)
+                  .add(const HomeEvent.initialize());
             }
           },
           child: Container(

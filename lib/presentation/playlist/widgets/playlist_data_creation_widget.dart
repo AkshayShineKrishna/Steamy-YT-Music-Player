@@ -8,7 +8,8 @@ class PlaylistDataCreationWidget extends StatelessWidget {
     super.key,
     required TextEditingController nameController,
     required TextEditingController descController,
-  }) : _nameController = nameController, _descController = descController;
+  })  : _nameController = nameController,
+        _descController = descController;
 
   final TextEditingController _nameController;
   final TextEditingController _descController;

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/home/home_bloc.dart';
@@ -41,4 +40,3 @@ class ScreenPLaylist extends StatelessWidget {
         ));
   }
 }
-
