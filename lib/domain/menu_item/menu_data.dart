@@ -5,4 +5,3 @@ class MenuData {
   final IconData icon;
   const MenuData(this.title, this.icon);
 }
-
