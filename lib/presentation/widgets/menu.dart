@@ -6,9 +6,8 @@ import 'package:steamy/domain/menu_item/menu_item.dart';
 class ScreenMenu extends StatelessWidget {
   final MenuData currentItem;
   final ValueChanged<MenuData> onSelectedItem;
-  const ScreenMenu({super.key,
-  required this.currentItem,
-  required this.onSelectedItem});
+  const ScreenMenu(
+      {super.key, required this.currentItem, required this.onSelectedItem});
 
   @override
   Widget build(BuildContext context) {
