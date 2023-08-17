@@ -5,4 +5,6 @@ class ApiEndpoints {
   static const refresh = '$baseUrl/refresh';
   static const getAudio = '$baseUrl/get_audio';
   static const download = '$baseUrl/send?video_url';
+  static const validatePlaylist = '$baseUrl/validate_playlist';
+  static const validateSong = '$baseUrl/validate_song_data';
 }
