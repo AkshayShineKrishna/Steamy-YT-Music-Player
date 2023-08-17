@@ -1,4 +1,8 @@
+import 'package:clipboard/clipboard.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/main/main_page.dart';
 import 'package:steamy/presentation/playlist/widgets/category_container.dart';
@@ -7,8 +11,10 @@ import 'package:steamy/presentation/playlist/widgets/new_playlist_message.dart';
 class PlaylistBody extends StatelessWidget {
   final String playlistName;
   final String? desc, category;
-  const PlaylistBody(
+  PlaylistBody(
       {super.key, required this.playlistName, this.desc, this.category});
+
+  final TextEditingController alertTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +34,10 @@ class PlaylistBody extends StatelessWidget {
         extendBodyBehindAppBar: true,
         backgroundColor: Colors.transparent,
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () async {
+            alertTextController.clear();
+            return _addSongDialog(context);
+          },
           child: const Icon(Icons.add),
         ),
         body: Container(
@@ -129,6 +138,83 @@ class PlaylistBody extends StatelessWidget {
     );
   }
 
+  Future<void> _addSongDialog(BuildContext context) {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return BlocBuilder<PlaylistBloc, PlaylistState>(
+          builder: (context, state) {
+            return AlertDialog(
+              content: SingleChildScrollView(
+                child: ListBody(
+                  children: [
+                    Container(
+                      child: state.alertFlag
+                          ? Image.asset('assets/playlist_loading.gif')
+                          : Image.asset('assets/playlist.png'),
+                    ),
+                    kHeight,
+                    TextField(
+                      controller: alertTextController,
+                      style: TextStyle(color: kdeepPurpleHighlight),
+                      decoration: InputDecoration(
+                        prefixIcon: GestureDetector(
+                          onTap: () async {
+                            String copiedUrl = await FlutterClipboard.paste();
+                            alertTextController.text = copiedUrl;
+                          },
+                          child: const Icon(
+                            CupertinoIcons.link,
+                            color: kDeepPurpleAccent,
+                          ),
+                        ),
+                        hintStyle: TextStyle(
+                          color: kdeepPurpleBackground,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        hintText: 'Paste the URL',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: kdeepPurpleBackground,
+                            width: 3,
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: kdeepPurpleBackground,
+                            width: 3,
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  child: const Text('Cancel'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                TextButton(
+                  child: const Text('Add'),
+                  onPressed: () {
+                    BlocProvider.of<PlaylistBloc>(context)
+                        .add(const PlaylistEvent.test());
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
   Widget _descSelector() {
     if (desc != null) {
       return Padding(
@@ -159,7 +245,7 @@ class SongListWidget extends StatelessWidget {
     return ListView.separated(
       shrinkWrap: true,
       itemBuilder: (context, index) {
-        // display number of songs after the last tile 
+        // display number of songs after the last tile
         if (index == 19) {
           return const Column(
             children: [
