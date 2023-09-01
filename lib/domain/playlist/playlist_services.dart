@@ -14,7 +14,7 @@ abstract class PlaylistServices {
 
   Future<void> addToLikedPlaylist({required SongData song});
 
-  List<Playlist> getPlaylists();
+  List<Playlist> getAllPlaylists();
 
   bool isSongIdInPlaylist(
       {required String playlistName, required String songId});
