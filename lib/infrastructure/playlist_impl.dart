@@ -16,7 +16,7 @@ class PlaylistServicesImpl implements PlaylistServices {
   }
 
   @override
-  List<Playlist> getPlaylists() {
+  List<Playlist> getAllPlaylists() {
     final playlistBox = Hive.box<Playlist>('playlists');
     return playlistBox.values.toList();
   }
