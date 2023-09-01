@@ -22,6 +22,11 @@ mixin _$PlaylistEvent {
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
     required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +35,10 @@ mixin _$PlaylistEvent {
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
     TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +47,10 @@ mixin _$PlaylistEvent {
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +60,9 @@ mixin _$PlaylistEvent {
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +71,9 @@ mixin _$PlaylistEvent {
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +82,9 @@ mixin _$PlaylistEvent {
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +176,11 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
     required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
   }) {
     return toggleStatusFlag(flag);
   }
@@ -165,6 +192,10 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
     TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
   }) {
     return toggleStatusFlag?.call(flag);
   }
@@ -176,6 +207,10 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -191,6 +226,9 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
   }) {
     return toggleStatusFlag(this);
   }
@@ -202,6 +240,9 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
   }) {
     return toggleStatusFlag?.call(this);
   }
@@ -213,6 +254,9 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -302,6 +346,11 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
     required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
   }) {
     return getSelctedCategory(currentCategoryIndex);
   }
@@ -313,6 +362,10 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
     TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
   }) {
     return getSelctedCategory?.call(currentCategoryIndex);
   }
@@ -324,6 +377,10 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -339,6 +396,9 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
   }) {
     return getSelctedCategory(this);
   }
@@ -350,6 +410,9 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
   }) {
     return getSelctedCategory?.call(this);
   }
@@ -361,6 +424,9 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -422,6 +488,11 @@ class _$_Initialize implements _Initialize {
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
     required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
   }) {
     return initialize();
   }
@@ -433,6 +504,10 @@ class _$_Initialize implements _Initialize {
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
     TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
   }) {
     return initialize?.call();
   }
@@ -444,6 +519,10 @@ class _$_Initialize implements _Initialize {
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -459,6 +538,9 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
   }) {
     return initialize(this);
   }
@@ -470,6 +552,9 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
   }) {
     return initialize?.call(this);
   }
@@ -481,6 +566,9 @@ class _$_Initialize implements _Initialize {
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -534,6 +622,11 @@ class _$_Test implements _Test {
     required TResult Function(int currentCategoryIndex) getSelctedCategory,
     required TResult Function() initialize,
     required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
   }) {
     return test();
   }
@@ -545,6 +638,10 @@ class _$_Test implements _Test {
     TResult? Function(int currentCategoryIndex)? getSelctedCategory,
     TResult? Function()? initialize,
     TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
   }) {
     return test?.call();
   }
@@ -556,6 +653,10 @@ class _$_Test implements _Test {
     TResult Function(int currentCategoryIndex)? getSelctedCategory,
     TResult Function()? initialize,
     TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (test != null) {
@@ -571,6 +672,9 @@ class _$_Test implements _Test {
     required TResult Function(_GetSelectedCategory value) getSelctedCategory,
     required TResult Function(_Initialize value) initialize,
     required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
   }) {
     return test(this);
   }
@@ -582,6 +686,9 @@ class _$_Test implements _Test {
     TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult? Function(_Initialize value)? initialize,
     TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
   }) {
     return test?.call(this);
   }
@@ -593,6 +700,9 @@ class _$_Test implements _Test {
     TResult Function(_GetSelectedCategory value)? getSelctedCategory,
     TResult Function(_Initialize value)? initialize,
     TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
     required TResult orElse(),
   }) {
     if (test != null) {
@@ -607,10 +717,529 @@ abstract class _Test implements PlaylistEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetAllPlaylistCopyWith<$Res> {
+  factory _$$_GetAllPlaylistCopyWith(
+          _$_GetAllPlaylist value, $Res Function(_$_GetAllPlaylist) then) =
+      __$$_GetAllPlaylistCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetAllPlaylistCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_GetAllPlaylist>
+    implements _$$_GetAllPlaylistCopyWith<$Res> {
+  __$$_GetAllPlaylistCopyWithImpl(
+      _$_GetAllPlaylist _value, $Res Function(_$_GetAllPlaylist) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetAllPlaylist implements _GetAllPlaylist {
+  const _$_GetAllPlaylist();
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.getAllPlaylist()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetAllPlaylist);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
+  }) {
+    return getAllPlaylist();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
+  }) {
+    return getAllPlaylist?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (getAllPlaylist != null) {
+      return getAllPlaylist();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
+  }) {
+    return getAllPlaylist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+  }) {
+    return getAllPlaylist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (getAllPlaylist != null) {
+      return getAllPlaylist(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllPlaylist implements PlaylistEvent {
+  const factory _GetAllPlaylist() = _$_GetAllPlaylist;
+}
+
+/// @nodoc
+abstract class _$$_GetCurrentPlayingCopyWith<$Res> {
+  factory _$$_GetCurrentPlayingCopyWith(_$_GetCurrentPlaying value,
+          $Res Function(_$_GetCurrentPlaying) then) =
+      __$$_GetCurrentPlayingCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String title, String artist, String art, String url});
+}
+
+/// @nodoc
+class __$$_GetCurrentPlayingCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_GetCurrentPlaying>
+    implements _$$_GetCurrentPlayingCopyWith<$Res> {
+  __$$_GetCurrentPlayingCopyWithImpl(
+      _$_GetCurrentPlaying _value, $Res Function(_$_GetCurrentPlaying) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? artist = null,
+    Object? art = null,
+    Object? url = null,
+  }) {
+    return _then(_$_GetCurrentPlaying(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      artist: null == artist
+          ? _value.artist
+          : artist // ignore: cast_nullable_to_non_nullable
+              as String,
+      art: null == art
+          ? _value.art
+          : art // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetCurrentPlaying implements _GetCurrentPlaying {
+  const _$_GetCurrentPlaying(
+      {required this.title,
+      required this.artist,
+      required this.art,
+      required this.url});
+
+  @override
+  final String title;
+  @override
+  final String artist;
+  @override
+  final String art;
+  @override
+  final String url;
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.getCurrentPlaying(title: $title, artist: $artist, art: $art, url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetCurrentPlaying &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.artist, artist) || other.artist == artist) &&
+            (identical(other.art, art) || other.art == art) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, title, artist, art, url);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetCurrentPlayingCopyWith<_$_GetCurrentPlaying> get copyWith =>
+      __$$_GetCurrentPlayingCopyWithImpl<_$_GetCurrentPlaying>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
+  }) {
+    return getCurrentPlaying(title, artist, art, url);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
+  }) {
+    return getCurrentPlaying?.call(title, artist, art, url);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPlaying != null) {
+      return getCurrentPlaying(title, artist, art, url);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
+  }) {
+    return getCurrentPlaying(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+  }) {
+    return getCurrentPlaying?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPlaying != null) {
+      return getCurrentPlaying(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCurrentPlaying implements PlaylistEvent {
+  const factory _GetCurrentPlaying(
+      {required final String title,
+      required final String artist,
+      required final String art,
+      required final String url}) = _$_GetCurrentPlaying;
+
+  String get title;
+  String get artist;
+  String get art;
+  String get url;
+  @JsonKey(ignore: true)
+  _$$_GetCurrentPlayingCopyWith<_$_GetCurrentPlaying> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ValidatePlaylistCopyWith<$Res> {
+  factory _$$_ValidatePlaylistCopyWith(
+          _$_ValidatePlaylist value, $Res Function(_$_ValidatePlaylist) then) =
+      __$$_ValidatePlaylistCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<String> urlList});
+}
+
+/// @nodoc
+class __$$_ValidatePlaylistCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_ValidatePlaylist>
+    implements _$$_ValidatePlaylistCopyWith<$Res> {
+  __$$_ValidatePlaylistCopyWithImpl(
+      _$_ValidatePlaylist _value, $Res Function(_$_ValidatePlaylist) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? urlList = null,
+  }) {
+    return _then(_$_ValidatePlaylist(
+      urlList: null == urlList
+          ? _value._urlList
+          : urlList // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ValidatePlaylist implements _ValidatePlaylist {
+  const _$_ValidatePlaylist({required final List<String> urlList})
+      : _urlList = urlList;
+
+  final List<String> _urlList;
+  @override
+  List<String> get urlList {
+    if (_urlList is EqualUnmodifiableListView) return _urlList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_urlList);
+  }
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.validatePlaylist(urlList: $urlList)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ValidatePlaylist &&
+            const DeepCollectionEquality().equals(other._urlList, _urlList));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_urlList));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ValidatePlaylistCopyWith<_$_ValidatePlaylist> get copyWith =>
+      __$$_ValidatePlaylistCopyWithImpl<_$_ValidatePlaylist>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
+  }) {
+    return validatePlaylist(urlList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
+  }) {
+    return validatePlaylist?.call(urlList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (validatePlaylist != null) {
+      return validatePlaylist(urlList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
+  }) {
+    return validatePlaylist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+  }) {
+    return validatePlaylist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    required TResult orElse(),
+  }) {
+    if (validatePlaylist != null) {
+      return validatePlaylist(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ValidatePlaylist implements PlaylistEvent {
+  const factory _ValidatePlaylist({required final List<String> urlList}) =
+      _$_ValidatePlaylist;
+
+  List<String> get urlList;
+  @JsonKey(ignore: true)
+  _$$_ValidatePlaylistCopyWith<_$_ValidatePlaylist> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$PlaylistState {
   bool get currentStatusFlag => throw _privateConstructorUsedError;
   int get currentSelectedCategory => throw _privateConstructorUsedError;
   bool get alertFlag => throw _privateConstructorUsedError;
+  List<Playlist> get allPlaylist => throw _privateConstructorUsedError;
+  String get currentPlaylistArt => throw _privateConstructorUsedError;
+  String get currentPlayingTitle => throw _privateConstructorUsedError;
+  String get currentPlayingArtist => throw _privateConstructorUsedError;
+  String get currentPlayingUrl => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PlaylistStateCopyWith<PlaylistState> get copyWith =>
@@ -624,7 +1253,14 @@ abstract class $PlaylistStateCopyWith<$Res> {
       _$PlaylistStateCopyWithImpl<$Res, PlaylistState>;
   @useResult
   $Res call(
-      {bool currentStatusFlag, int currentSelectedCategory, bool alertFlag});
+      {bool currentStatusFlag,
+      int currentSelectedCategory,
+      bool alertFlag,
+      List<Playlist> allPlaylist,
+      String currentPlaylistArt,
+      String currentPlayingTitle,
+      String currentPlayingArtist,
+      String currentPlayingUrl});
 }
 
 /// @nodoc
@@ -643,6 +1279,11 @@ class _$PlaylistStateCopyWithImpl<$Res, $Val extends PlaylistState>
     Object? currentStatusFlag = null,
     Object? currentSelectedCategory = null,
     Object? alertFlag = null,
+    Object? allPlaylist = null,
+    Object? currentPlaylistArt = null,
+    Object? currentPlayingTitle = null,
+    Object? currentPlayingArtist = null,
+    Object? currentPlayingUrl = null,
   }) {
     return _then(_value.copyWith(
       currentStatusFlag: null == currentStatusFlag
@@ -657,6 +1298,26 @@ class _$PlaylistStateCopyWithImpl<$Res, $Val extends PlaylistState>
           ? _value.alertFlag
           : alertFlag // ignore: cast_nullable_to_non_nullable
               as bool,
+      allPlaylist: null == allPlaylist
+          ? _value.allPlaylist
+          : allPlaylist // ignore: cast_nullable_to_non_nullable
+              as List<Playlist>,
+      currentPlaylistArt: null == currentPlaylistArt
+          ? _value.currentPlaylistArt
+          : currentPlaylistArt // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingTitle: null == currentPlayingTitle
+          ? _value.currentPlayingTitle
+          : currentPlayingTitle // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingArtist: null == currentPlayingArtist
+          ? _value.currentPlayingArtist
+          : currentPlayingArtist // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingUrl: null == currentPlayingUrl
+          ? _value.currentPlayingUrl
+          : currentPlayingUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -670,7 +1331,14 @@ abstract class _$$_PlaylistStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool currentStatusFlag, int currentSelectedCategory, bool alertFlag});
+      {bool currentStatusFlag,
+      int currentSelectedCategory,
+      bool alertFlag,
+      List<Playlist> allPlaylist,
+      String currentPlaylistArt,
+      String currentPlayingTitle,
+      String currentPlayingArtist,
+      String currentPlayingUrl});
 }
 
 /// @nodoc
@@ -687,6 +1355,11 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
     Object? currentStatusFlag = null,
     Object? currentSelectedCategory = null,
     Object? alertFlag = null,
+    Object? allPlaylist = null,
+    Object? currentPlaylistArt = null,
+    Object? currentPlayingTitle = null,
+    Object? currentPlayingArtist = null,
+    Object? currentPlayingUrl = null,
   }) {
     return _then(_$_PlaylistState(
       currentStatusFlag: null == currentStatusFlag
@@ -701,6 +1374,26 @@ class __$$_PlaylistStateCopyWithImpl<$Res>
           ? _value.alertFlag
           : alertFlag // ignore: cast_nullable_to_non_nullable
               as bool,
+      allPlaylist: null == allPlaylist
+          ? _value._allPlaylist
+          : allPlaylist // ignore: cast_nullable_to_non_nullable
+              as List<Playlist>,
+      currentPlaylistArt: null == currentPlaylistArt
+          ? _value.currentPlaylistArt
+          : currentPlaylistArt // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingTitle: null == currentPlayingTitle
+          ? _value.currentPlayingTitle
+          : currentPlayingTitle // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingArtist: null == currentPlayingArtist
+          ? _value.currentPlayingArtist
+          : currentPlayingArtist // ignore: cast_nullable_to_non_nullable
+              as String,
+      currentPlayingUrl: null == currentPlayingUrl
+          ? _value.currentPlayingUrl
+          : currentPlayingUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -711,7 +1404,13 @@ class _$_PlaylistState implements _PlaylistState {
   const _$_PlaylistState(
       {required this.currentStatusFlag,
       required this.currentSelectedCategory,
-      required this.alertFlag});
+      required this.alertFlag,
+      required final List<Playlist> allPlaylist,
+      required this.currentPlaylistArt,
+      required this.currentPlayingTitle,
+      required this.currentPlayingArtist,
+      required this.currentPlayingUrl})
+      : _allPlaylist = allPlaylist;
 
   @override
   final bool currentStatusFlag;
@@ -719,10 +1418,26 @@ class _$_PlaylistState implements _PlaylistState {
   final int currentSelectedCategory;
   @override
   final bool alertFlag;
+  final List<Playlist> _allPlaylist;
+  @override
+  List<Playlist> get allPlaylist {
+    if (_allPlaylist is EqualUnmodifiableListView) return _allPlaylist;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_allPlaylist);
+  }
+
+  @override
+  final String currentPlaylistArt;
+  @override
+  final String currentPlayingTitle;
+  @override
+  final String currentPlayingArtist;
+  @override
+  final String currentPlayingUrl;
 
   @override
   String toString() {
-    return 'PlaylistState(currentStatusFlag: $currentStatusFlag, currentSelectedCategory: $currentSelectedCategory, alertFlag: $alertFlag)';
+    return 'PlaylistState(currentStatusFlag: $currentStatusFlag, currentSelectedCategory: $currentSelectedCategory, alertFlag: $alertFlag, allPlaylist: $allPlaylist, currentPlaylistArt: $currentPlaylistArt, currentPlayingTitle: $currentPlayingTitle, currentPlayingArtist: $currentPlayingArtist, currentPlayingUrl: $currentPlayingUrl)';
   }
 
   @override
@@ -736,12 +1451,30 @@ class _$_PlaylistState implements _PlaylistState {
                     other.currentSelectedCategory, currentSelectedCategory) ||
                 other.currentSelectedCategory == currentSelectedCategory) &&
             (identical(other.alertFlag, alertFlag) ||
-                other.alertFlag == alertFlag));
+                other.alertFlag == alertFlag) &&
+            const DeepCollectionEquality()
+                .equals(other._allPlaylist, _allPlaylist) &&
+            (identical(other.currentPlaylistArt, currentPlaylistArt) ||
+                other.currentPlaylistArt == currentPlaylistArt) &&
+            (identical(other.currentPlayingTitle, currentPlayingTitle) ||
+                other.currentPlayingTitle == currentPlayingTitle) &&
+            (identical(other.currentPlayingArtist, currentPlayingArtist) ||
+                other.currentPlayingArtist == currentPlayingArtist) &&
+            (identical(other.currentPlayingUrl, currentPlayingUrl) ||
+                other.currentPlayingUrl == currentPlayingUrl));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, currentStatusFlag, currentSelectedCategory, alertFlag);
+      runtimeType,
+      currentStatusFlag,
+      currentSelectedCategory,
+      alertFlag,
+      const DeepCollectionEquality().hash(_allPlaylist),
+      currentPlaylistArt,
+      currentPlayingTitle,
+      currentPlayingArtist,
+      currentPlayingUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -754,7 +1487,12 @@ abstract class _PlaylistState implements PlaylistState {
   const factory _PlaylistState(
       {required final bool currentStatusFlag,
       required final int currentSelectedCategory,
-      required final bool alertFlag}) = _$_PlaylistState;
+      required final bool alertFlag,
+      required final List<Playlist> allPlaylist,
+      required final String currentPlaylistArt,
+      required final String currentPlayingTitle,
+      required final String currentPlayingArtist,
+      required final String currentPlayingUrl}) = _$_PlaylistState;
 
   @override
   bool get currentStatusFlag;
@@ -762,6 +1500,16 @@ abstract class _PlaylistState implements PlaylistState {
   int get currentSelectedCategory;
   @override
   bool get alertFlag;
+  @override
+  List<Playlist> get allPlaylist;
+  @override
+  String get currentPlaylistArt;
+  @override
+  String get currentPlayingTitle;
+  @override
+  String get currentPlayingArtist;
+  @override
+  String get currentPlayingUrl;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistStateCopyWith<_$_PlaylistState> get copyWith =>

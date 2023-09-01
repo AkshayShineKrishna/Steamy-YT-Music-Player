@@ -6,8 +6,13 @@ class PlaylistState with _$PlaylistState {
     required bool currentStatusFlag,
     required int currentSelectedCategory,
     required bool alertFlag,
+    required List<Playlist> allPlaylist,
+    required String currentPlaylistArt,
+    required String currentPlayingTitle,
+    required String currentPlayingArtist,
+    required String currentPlayingUrl,
   }) = _PlaylistState;
 
   factory PlaylistState.initial() => const PlaylistState(
-      currentStatusFlag: false, currentSelectedCategory: -1, alertFlag: false);
+      currentStatusFlag: false, currentSelectedCategory: -1, alertFlag: false, allPlaylist: [], currentPlayingArtist: '', currentPlayingTitle: '', currentPlaylistArt: '', currentPlayingUrl: '');
 }
