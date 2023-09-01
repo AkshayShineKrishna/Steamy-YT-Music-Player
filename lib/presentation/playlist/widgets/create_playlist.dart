@@ -63,6 +63,7 @@ class CreatePlaylist extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
                 builder: (context) => PlaylistBody(
+                      songs: [],
                       playlistName: _nameController.text.trim(),
                       category:
                           _categorySelector(state.currentSelectedCategory),

@@ -1,16 +1,38 @@
-import 'dart:developer';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
-import 'package:steamy/domain/category/category.dart';
+import 'package:steamy/domain/playlist/model/song_data.dart';
+import 'package:steamy/presentation/playlist/playlist_player/playlist_player.dart';
 import 'package:steamy/presentation/playlist/widgets/category_container.dart';
+import 'package:steamy/presentation/playlist/widgets/playlist_body.dart';
 
 class PlaylistCardWidget extends StatelessWidget {
-  const PlaylistCardWidget({super.key});
+  final String title;
+  final int len;
+  final String? mood, desc;
+  final List<SongData> songs;
+  const  PlaylistCardWidget(
+      {super.key,
+      required this.title,
+      required this.len,
+      this.mood,
+      required this.songs,
+      this.desc});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => log('pressed'),
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => PlaylistBody(
+                  playlistName: title,
+                  desc: desc,
+                  category: mood,
+                  songs: songs,
+                )));
+      },
       child: Container(
         height: 150,
         decoration: BoxDecoration(
@@ -26,37 +48,38 @@ class PlaylistCardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Liked Songs',
-                    style: TextStyle(
+                  Text(
+                    title,
+                    style: const TextStyle(
                         color: kWhite,
                         fontSize: 30,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    '69 songs',
+                    '$len songs',
                     style: TextStyle(
                         color: kWhite.withOpacity(0.8),
                         fontSize: 15,
                         fontWeight: FontWeight.w600),
                   ),
                   const Spacer(),
-                  CategoryContainer(
-                    category: Category.categoryList[15],
-                    containerColor: kWhite.withOpacity(0.2),
-                    textColor: kWhiteFont,
-                  ),
+                  mood != null
+                      ? CategoryContainer(
+                          category: mood,
+                          containerColor: kWhite.withOpacity(0.2),
+                          textColor: kWhiteFont,
+                        )
+                      : kHeight,
                   kHeight
                 ],
               ),
               Stack(
                 children: [
-                  const Column(
+                  Column(
                     children: [
                       CircleAvatar(
                         radius: 50,
-                        backgroundImage: NetworkImage(
-                            'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rap-cd-album-mixtape-cover-design-template-8e67148b45c3625087dc1cb15f1de8a8_screen.jpg?ts=1629408333'),
+                        backgroundImage: _imageSelector(),
                       )
                     ],
                   ),
@@ -71,7 +94,19 @@ class PlaylistCardWidget extends StatelessWidget {
                           Icons.play_arrow_rounded,
                           size: 42,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          List<String> songUrls =
+                              songs.map((song) => song.url).toList();
+                          BlocProvider.of<PlaylistBloc>(context).add(
+                              PlaylistEvent.validatePlaylist(
+                                  urlList: songUrls));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => ScreenPlaylistPlayer(
+                                    songs: songs,
+                                    playlistName: title,
+                                    totalSongs: len.toString(),
+                                  )));
+                        },
                       ),
                     ),
                   )
@@ -82,5 +117,16 @@ class PlaylistCardWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  ImageProvider _imageSelector() {
+    if (len != 0 && songs.isNotEmpty) {
+      final randomIndex = Random().nextInt(songs.length);
+      return NetworkImage(
+        'https://i.ytimg.com/vi/${songs[randomIndex].songKey}/maxresdefault.jpg',
+      );
+    } else {
+      return const AssetImage('assets/logo.png');
+    }
   }
 }
