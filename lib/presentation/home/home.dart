@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/home/home_bloc.dart';
+import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/home/widgets/defaultbottomcontainer.dart';
 import 'package:steamy/presentation/home/widgets/defaultimagewidget.dart';
@@ -19,6 +20,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+      BlocProvider.of<PlaylistBloc>(context)
+          .add(const PlaylistEvent.getAllPlaylist());
     });
     return Scaffold(
       appBar: PreferredSize(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/home/home_bloc.dart';
+import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/presentation/playlist/widgets/playlist_widget.dart';
 import 'package:steamy/presentation/widgets/app_bar_widget.dart';
@@ -13,6 +14,8 @@ class ScreenPLaylist extends StatelessWidget {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.initialize());
+      BlocProvider.of<PlaylistBloc>(context)
+          .add(const PlaylistEvent.getAllPlaylist());
     });
     return Scaffold(
         backgroundColor: kdeepPurpleBackground,
