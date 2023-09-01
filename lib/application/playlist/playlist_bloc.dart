@@ -22,6 +22,8 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
     this._playlistServices,
     this._validateServices,
   ) : super(PlaylistState.initial()) {
+
+    // to toggle create button
     on<_ToggleStatusFlag>((event, emit) {
       if (!event.flag) {
         if (!state.currentStatusFlag) {
@@ -32,6 +34,7 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
       emit(state.copyWith(currentStatusFlag: false));
     });
 
+    // to initialize playlist page
     on<_Initialize>(((event, emit) => emit(
           state.copyWith(
               currentStatusFlag: false,
@@ -39,6 +42,7 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
               alertFlag: false),
         )));
 
+    // to toggle selected category
     on<_GetSelectedCategory>(
       (event, emit) {
         if (state.currentSelectedCategory == event.currentCategoryIndex) {
@@ -57,12 +61,14 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
       },
     );
 
+  // get all playlist data
     on<_GetAllPlaylist>(((event, emit) {
       final List<Playlist> playlist = _playlistServices.getAllPlaylists();
       // log(playlist.toList());
       emit(state.copyWith(allPlaylist: playlist));
     }));
 
+  // get current playing song data
     on<_GetCurrentPlaying>(
       (event, emit) {
         log(event.url);
@@ -74,6 +80,7 @@ class PlaylistBloc extends Bloc<PlaylistEvent, PlaylistState> {
       },
     );
 
+    // initialize current playlist
     on<_ValidatePlaylist>((event, emit) async {
       final result =
           await _validateServices.validatePlaylist(urlList: event.urlList);

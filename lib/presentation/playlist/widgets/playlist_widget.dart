@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
-import 'package:steamy/domain/playlist/model/song_data.dart';
 import 'package:steamy/presentation/playlist/widgets/playlist_card.dart';
 
 class PlayListWidget extends StatelessWidget {
