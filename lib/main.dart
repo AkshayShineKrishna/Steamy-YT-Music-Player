@@ -35,7 +35,12 @@ Future<void> main() async {
   final likedPlaylist = Hive.box<Playlist>('playlists').get('Liked');
   log('value of likedPlaylist : ${likedPlaylist.toString()}');
   if (likedPlaylist == null) {
-    final newLikedPlaylist = Playlist(name: 'Liked', songs: []);
+    final newLikedPlaylist = Playlist(
+        name: 'Liked',
+        songs: [],
+        description:
+            "Welcome to your Liked Playlist! Here, you'll find all your favorite tunes gathered in one harmonious collection. Enjoy the music you love, effortlessly.",
+        mood: '👍 Collections');
     Hive.box<Playlist>('playlists').put('Liked', newLikedPlaylist);
   }
   runApp(const MyApp());
