@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -72,10 +71,8 @@ class _ScreenSplashState extends State<ScreenSplash> {
 void logger() {
   //for testing purposes
   final services = GetIt.instance.get<PlaylistServices>();
-  List<Playlist> list = services.getPlaylists();
-  bool status =
-      services.isSongIdInPlaylist(playlistName: 'Liked', songId: 'X7WXHhokylc');
-  log(status.toString());
+  List<Playlist> list = services.getAllPlaylists();
+  log(list.length.toString());
   for (var i = 0; i < list.length; i++) {
     log(list[i].name);
     log(list[i].songs.asMap().toString());
