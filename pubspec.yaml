@@ -48,7 +48,6 @@ dependencies:
   just_audio: ^0.9.34
   just_audio_background: ^0.0.1-beta.10
   cached_network_image: ^3.2.3
-  http: ^1.1.0
   audio_video_progress_bar: ^1.0.1
   rxdart: ^0.27.7
   url_launcher: ^6.1.12
