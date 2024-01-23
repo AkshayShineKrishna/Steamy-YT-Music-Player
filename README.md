@@ -1,3 +1,4 @@
+![Repository Banner](https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/header.jpg)
 # 🎵 Steamy - YT Music Player 📱
 
 Steamy is a Flutter app that serves as a music player, allowing users to stream music from YouTube without ads and download their favorite tracks. The app utilizes the Flutter BLoC (Business Logic Component) pattern for state management and follows the Domain-Driven Design (DDD) architecture to ensure a robust and maintainable codebase. 🚀
@@ -8,6 +9,10 @@ Steamy is a Flutter app that serves as a music player, allowing users to stream 
 - Dart: The programming language used in conjunction with Flutter for building efficient and flexible user interfaces. 🎯
 - Python: Used to develop custom APIs that facilitate communication between the app and external services, such as fetching YouTube music and handling downloads. 🐍
 - Flask: A lightweight and flexible Python web framework used to build the custom API endpoints. 🌶️
+
+## Screenshots
+
+<img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp1.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp2.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp3.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp4.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp5.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp6.png" width="35%">
 
 ## Features 🎶
 
