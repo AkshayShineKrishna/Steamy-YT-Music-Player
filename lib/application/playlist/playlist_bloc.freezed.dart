@@ -27,6 +27,9 @@ mixin _$PlaylistEvent {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +42,8 @@ mixin _$PlaylistEvent {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +56,8 @@ mixin _$PlaylistEvent {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +70,8 @@ mixin _$PlaylistEvent {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +83,8 @@ mixin _$PlaylistEvent {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +96,8 @@ mixin _$PlaylistEvent {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -181,6 +194,9 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return toggleStatusFlag(flag);
   }
@@ -196,6 +212,8 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return toggleStatusFlag?.call(flag);
   }
@@ -211,6 +229,8 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -229,6 +249,8 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return toggleStatusFlag(this);
   }
@@ -243,6 +265,8 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return toggleStatusFlag?.call(this);
   }
@@ -257,6 +281,8 @@ class _$_ToggleStatusFlag implements _ToggleStatusFlag {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (toggleStatusFlag != null) {
@@ -351,6 +377,9 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return getSelctedCategory(currentCategoryIndex);
   }
@@ -366,6 +395,8 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return getSelctedCategory?.call(currentCategoryIndex);
   }
@@ -381,6 +412,8 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -399,6 +432,8 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return getSelctedCategory(this);
   }
@@ -413,6 +448,8 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return getSelctedCategory?.call(this);
   }
@@ -427,6 +464,8 @@ class _$_GetSelectedCategory implements _GetSelectedCategory {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (getSelctedCategory != null) {
@@ -493,6 +532,9 @@ class _$_Initialize implements _Initialize {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return initialize();
   }
@@ -508,6 +550,8 @@ class _$_Initialize implements _Initialize {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return initialize?.call();
   }
@@ -523,6 +567,8 @@ class _$_Initialize implements _Initialize {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -541,6 +587,8 @@ class _$_Initialize implements _Initialize {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return initialize(this);
   }
@@ -555,6 +603,8 @@ class _$_Initialize implements _Initialize {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return initialize?.call(this);
   }
@@ -569,6 +619,8 @@ class _$_Initialize implements _Initialize {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -627,6 +679,9 @@ class _$_Test implements _Test {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return test();
   }
@@ -642,6 +697,8 @@ class _$_Test implements _Test {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return test?.call();
   }
@@ -657,6 +714,8 @@ class _$_Test implements _Test {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (test != null) {
@@ -675,6 +734,8 @@ class _$_Test implements _Test {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return test(this);
   }
@@ -689,6 +750,8 @@ class _$_Test implements _Test {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return test?.call(this);
   }
@@ -703,6 +766,8 @@ class _$_Test implements _Test {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (test != null) {
@@ -763,6 +828,9 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return getAllPlaylist();
   }
@@ -778,6 +846,8 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return getAllPlaylist?.call();
   }
@@ -793,6 +863,8 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (getAllPlaylist != null) {
@@ -811,6 +883,8 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return getAllPlaylist(this);
   }
@@ -825,6 +899,8 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return getAllPlaylist?.call(this);
   }
@@ -839,6 +915,8 @@ class _$_GetAllPlaylist implements _GetAllPlaylist {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (getAllPlaylist != null) {
@@ -954,6 +1032,9 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return getCurrentPlaying(title, artist, art, url);
   }
@@ -969,6 +1050,8 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return getCurrentPlaying?.call(title, artist, art, url);
   }
@@ -984,6 +1067,8 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (getCurrentPlaying != null) {
@@ -1002,6 +1087,8 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return getCurrentPlaying(this);
   }
@@ -1016,6 +1103,8 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return getCurrentPlaying?.call(this);
   }
@@ -1030,6 +1119,8 @@ class _$_GetCurrentPlaying implements _GetCurrentPlaying {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (getCurrentPlaying != null) {
@@ -1135,6 +1226,9 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
             String title, String artist, String art, String url)
         getCurrentPlaying,
     required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
   }) {
     return validatePlaylist(urlList);
   }
@@ -1150,6 +1244,8 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
     TResult? Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
   }) {
     return validatePlaylist?.call(urlList);
   }
@@ -1165,6 +1261,8 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
     TResult Function(String title, String artist, String art, String url)?
         getCurrentPlaying,
     TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
     required TResult orElse(),
   }) {
     if (validatePlaylist != null) {
@@ -1183,6 +1281,8 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
     required TResult Function(_GetAllPlaylist value) getAllPlaylist,
     required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
     required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
   }) {
     return validatePlaylist(this);
   }
@@ -1197,6 +1297,8 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
     TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
   }) {
     return validatePlaylist?.call(this);
   }
@@ -1211,6 +1313,8 @@ class _$_ValidatePlaylist implements _ValidatePlaylist {
     TResult Function(_GetAllPlaylist value)? getAllPlaylist,
     TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
     TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
     required TResult orElse(),
   }) {
     if (validatePlaylist != null) {
@@ -1227,6 +1331,400 @@ abstract class _ValidatePlaylist implements PlaylistEvent {
   List<String> get urlList;
   @JsonKey(ignore: true)
   _$$_ValidatePlaylistCopyWith<_$_ValidatePlaylist> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_CreatePlaylistCopyWith<$Res> {
+  factory _$$_CreatePlaylistCopyWith(
+          _$_CreatePlaylist value, $Res Function(_$_CreatePlaylist) then) =
+      __$$_CreatePlaylistCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String name, String? desc, String? mood});
+}
+
+/// @nodoc
+class __$$_CreatePlaylistCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_CreatePlaylist>
+    implements _$$_CreatePlaylistCopyWith<$Res> {
+  __$$_CreatePlaylistCopyWithImpl(
+      _$_CreatePlaylist _value, $Res Function(_$_CreatePlaylist) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? desc = freezed,
+    Object? mood = freezed,
+  }) {
+    return _then(_$_CreatePlaylist(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mood: freezed == mood
+          ? _value.mood
+          : mood // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_CreatePlaylist implements _CreatePlaylist {
+  const _$_CreatePlaylist(
+      {required this.name, required this.desc, required this.mood});
+
+  @override
+  final String name;
+  @override
+  final String? desc;
+  @override
+  final String? mood;
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.createPlaylist(name: $name, desc: $desc, mood: $mood)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CreatePlaylist &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.desc, desc) || other.desc == desc) &&
+            (identical(other.mood, mood) || other.mood == mood));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, name, desc, mood);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CreatePlaylistCopyWith<_$_CreatePlaylist> get copyWith =>
+      __$$_CreatePlaylistCopyWithImpl<_$_CreatePlaylist>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
+  }) {
+    return createPlaylist(name, desc, mood);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
+  }) {
+    return createPlaylist?.call(name, desc, mood);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
+    required TResult orElse(),
+  }) {
+    if (createPlaylist != null) {
+      return createPlaylist(name, desc, mood);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
+  }) {
+    return createPlaylist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
+  }) {
+    return createPlaylist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
+    required TResult orElse(),
+  }) {
+    if (createPlaylist != null) {
+      return createPlaylist(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CreatePlaylist implements PlaylistEvent {
+  const factory _CreatePlaylist(
+      {required final String name,
+      required final String? desc,
+      required final String? mood}) = _$_CreatePlaylist;
+
+  String get name;
+  String? get desc;
+  String? get mood;
+  @JsonKey(ignore: true)
+  _$$_CreatePlaylistCopyWith<_$_CreatePlaylist> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ValidateSongCopyWith<$Res> {
+  factory _$$_ValidateSongCopyWith(
+          _$_ValidateSong value, $Res Function(_$_ValidateSong) then) =
+      __$$_ValidateSongCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String songUrl, String playlistName});
+}
+
+/// @nodoc
+class __$$_ValidateSongCopyWithImpl<$Res>
+    extends _$PlaylistEventCopyWithImpl<$Res, _$_ValidateSong>
+    implements _$$_ValidateSongCopyWith<$Res> {
+  __$$_ValidateSongCopyWithImpl(
+      _$_ValidateSong _value, $Res Function(_$_ValidateSong) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? songUrl = null,
+    Object? playlistName = null,
+  }) {
+    return _then(_$_ValidateSong(
+      songUrl: null == songUrl
+          ? _value.songUrl
+          : songUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      playlistName: null == playlistName
+          ? _value.playlistName
+          : playlistName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ValidateSong implements _ValidateSong {
+  const _$_ValidateSong({required this.songUrl, required this.playlistName});
+
+  @override
+  final String songUrl;
+  @override
+  final String playlistName;
+
+  @override
+  String toString() {
+    return 'PlaylistEvent.validateSong(songUrl: $songUrl, playlistName: $playlistName)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ValidateSong &&
+            (identical(other.songUrl, songUrl) || other.songUrl == songUrl) &&
+            (identical(other.playlistName, playlistName) ||
+                other.playlistName == playlistName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, songUrl, playlistName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ValidateSongCopyWith<_$_ValidateSong> get copyWith =>
+      __$$_ValidateSongCopyWithImpl<_$_ValidateSong>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool flag) toggleStatusFlag,
+    required TResult Function(int currentCategoryIndex) getSelctedCategory,
+    required TResult Function() initialize,
+    required TResult Function() test,
+    required TResult Function() getAllPlaylist,
+    required TResult Function(
+            String title, String artist, String art, String url)
+        getCurrentPlaying,
+    required TResult Function(List<String> urlList) validatePlaylist,
+    required TResult Function(String name, String? desc, String? mood)
+        createPlaylist,
+    required TResult Function(String songUrl, String playlistName) validateSong,
+  }) {
+    return validateSong(songUrl, playlistName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool flag)? toggleStatusFlag,
+    TResult? Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult? Function()? initialize,
+    TResult? Function()? test,
+    TResult? Function()? getAllPlaylist,
+    TResult? Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult? Function(List<String> urlList)? validatePlaylist,
+    TResult? Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult? Function(String songUrl, String playlistName)? validateSong,
+  }) {
+    return validateSong?.call(songUrl, playlistName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool flag)? toggleStatusFlag,
+    TResult Function(int currentCategoryIndex)? getSelctedCategory,
+    TResult Function()? initialize,
+    TResult Function()? test,
+    TResult Function()? getAllPlaylist,
+    TResult Function(String title, String artist, String art, String url)?
+        getCurrentPlaying,
+    TResult Function(List<String> urlList)? validatePlaylist,
+    TResult Function(String name, String? desc, String? mood)? createPlaylist,
+    TResult Function(String songUrl, String playlistName)? validateSong,
+    required TResult orElse(),
+  }) {
+    if (validateSong != null) {
+      return validateSong(songUrl, playlistName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleStatusFlag value) toggleStatusFlag,
+    required TResult Function(_GetSelectedCategory value) getSelctedCategory,
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_Test value) test,
+    required TResult Function(_GetAllPlaylist value) getAllPlaylist,
+    required TResult Function(_GetCurrentPlaying value) getCurrentPlaying,
+    required TResult Function(_ValidatePlaylist value) validatePlaylist,
+    required TResult Function(_CreatePlaylist value) createPlaylist,
+    required TResult Function(_ValidateSong value) validateSong,
+  }) {
+    return validateSong(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult? Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_Test value)? test,
+    TResult? Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult? Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult? Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult? Function(_CreatePlaylist value)? createPlaylist,
+    TResult? Function(_ValidateSong value)? validateSong,
+  }) {
+    return validateSong?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleStatusFlag value)? toggleStatusFlag,
+    TResult Function(_GetSelectedCategory value)? getSelctedCategory,
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_Test value)? test,
+    TResult Function(_GetAllPlaylist value)? getAllPlaylist,
+    TResult Function(_GetCurrentPlaying value)? getCurrentPlaying,
+    TResult Function(_ValidatePlaylist value)? validatePlaylist,
+    TResult Function(_CreatePlaylist value)? createPlaylist,
+    TResult Function(_ValidateSong value)? validateSong,
+    required TResult orElse(),
+  }) {
+    if (validateSong != null) {
+      return validateSong(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ValidateSong implements PlaylistEvent {
+  const factory _ValidateSong(
+      {required final String songUrl,
+      required final String playlistName}) = _$_ValidateSong;
+
+  String get songUrl;
+  String get playlistName;
+  @JsonKey(ignore: true)
+  _$$_ValidateSongCopyWith<_$_ValidateSong> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

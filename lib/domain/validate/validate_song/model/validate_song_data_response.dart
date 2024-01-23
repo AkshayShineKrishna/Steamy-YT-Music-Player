@@ -18,15 +18,15 @@ class ValidateSongDataResponse {
 @JsonSerializable()
 class SongDataResult {
   @JsonKey(name: 'artist')
-  String? artist;
+  String artist;
   @JsonKey(name: 'song_duration')
-  String? songDuration;
+  String songDuration;
   @JsonKey(name: 'song_key')
-  String? songKey;
+  String songKey;
   @JsonKey(name: 'title')
-  String? title;
+  String title;
 
-  SongDataResult({this.artist, this.songDuration, this.songKey, this.title});
+  SongDataResult({this.artist = '', this.songDuration = '0 sec', this.songKey = '', this.title = ''});
 
   factory SongDataResult.fromJson(Map<String, dynamic> json) {
     return _$SongDataResultFromJson(json);

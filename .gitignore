@@ -45,3 +45,5 @@ app.*.map.json
 
 #server ip
 /lib/core/baseurl.dart
+#experimental protocol
+lib/presentation/lockdown

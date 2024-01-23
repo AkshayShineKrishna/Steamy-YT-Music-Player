@@ -1,8 +1,10 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steamy/application/playlist/playlist_bloc.dart';
 import 'package:steamy/core/constants.dart';
 import 'package:steamy/domain/category/category.dart';
+import 'package:steamy/domain/playlist/model/playlist_data.dart';
 import 'package:steamy/presentation/playlist/widgets/cancel_button.dart';
 import 'package:steamy/presentation/playlist/widgets/categories_list_widget.dart';
 import 'package:steamy/presentation/playlist/widgets/playlist_body.dart';
@@ -60,17 +62,49 @@ class CreatePlaylist extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         if (state.currentStatusFlag) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-                builder: (context) => PlaylistBody(
-                      songs: [],
-                      playlistName: _nameController.text.trim(),
-                      category:
-                          _categorySelector(state.currentSelectedCategory),
-                      desc: _descController.text.trim(),
-                    )),
-          );
+          final List<Playlist> playlists = state.allPlaylist;
+          bool playlistExists = playlists.any((playlist) =>
+              playlist.name.toLowerCase() ==
+              _nameController.text.trim().toLowerCase());
+          log("Playlist exist state => $playlistExists");
+          if (!playlistExists) {
+            BlocProvider.of<PlaylistBloc>(context).add(
+                PlaylistEvent.createPlaylist(
+                    name: _nameController.text.trim(),
+                    desc: _descController.text.trim(),
+                    mood: _categorySelector(state.currentSelectedCategory)));
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (context) => PlaylistBody(
+                        songs: const [],
+                        playlistName: _nameController.text.trim(),
+                        category:
+                            _categorySelector(state.currentSelectedCategory),
+                        desc: _descController.text.trim(),
+                      )),
+            );
+            return;
+          } else {
+            const snackBar = SnackBar(
+              content: Text(
+                'Oops! 😬 Playlist already exists',
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              ),
+              backgroundColor: kWhite,
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            return;
+          }
         }
+        const snackBar = SnackBar(
+          content: Text(
+            'Enter a playlist name to continue',
+            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: kWhite,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
       style: ElevatedButton.styleFrom(
           backgroundColor:

@@ -10,7 +10,7 @@ abstract class PlaylistServices {
       String? mood,
       String duration = "0 sec"});
 
-  Future<void> addToPlaylist(String playlistName, SongData song);
+  Future<void> addToPlaylist({required playlistName,required SongData song});
 
   Future<void> addToLikedPlaylist({required SongData song});
 

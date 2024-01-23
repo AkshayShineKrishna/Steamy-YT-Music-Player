@@ -193,8 +193,12 @@ class PlaylistBody extends StatelessWidget {
                 TextButton(
                   child: const Text('Add'),
                   onPressed: () {
+                    BlocProvider.of<PlaylistBloc>(context).add(
+                        PlaylistEvent.validateSong(
+                            playlistName: playlistName,
+                            songUrl: alertTextController.text.trim()));
                     BlocProvider.of<PlaylistBloc>(context)
-                        .add(const PlaylistEvent.test());
+                        .add(const PlaylistEvent.getAllPlaylist());
                   },
                 ),
               ],

@@ -105,7 +105,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                 widget.title,
                 style:
                     const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                maxLines: 2,
+                maxLines: 1,
                 overflow: TextOverflow.fade,
               )),
             ],

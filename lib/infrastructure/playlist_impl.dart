@@ -7,7 +7,7 @@ import 'package:steamy/domain/playlist/playlist_services.dart';
 @LazySingleton(as: PlaylistServices)
 class PlaylistServicesImpl implements PlaylistServices {
   @override
-  Future<void> addToPlaylist(String playlistName, SongData song) async {
+  Future<void> addToPlaylist({required playlistName,required SongData song}) async {
     final playlistBox = Hive.box<Playlist>('playlists');
     final playlist =
         playlistBox.values.firstWhere((pl) => pl.name == playlistName);

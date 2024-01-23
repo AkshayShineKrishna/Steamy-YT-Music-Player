@@ -54,7 +54,17 @@ class ControlsWidget extends StatelessWidget {
               );
             }),
         IconButton(
-          onPressed: _urlFetcher,
+          onPressed: () {
+            _urlFetcher();
+            const snackBar = SnackBar(
+              content: Text(
+                'Opening Browser 🌐 Please wait',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          },
           icon: const Icon(Icons.download_rounded),
           iconSize: 35,
           tooltip: 'Download audio',

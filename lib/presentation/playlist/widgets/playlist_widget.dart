@@ -16,6 +16,7 @@ class PlayListWidget extends StatelessWidget {
           BlocBuilder<PlaylistBloc, PlaylistState>(builder: (context, state) {
         final playlist = state.allPlaylist;
         return ListView.separated(
+          shrinkWrap: true,
             itemBuilder: (context, index) {
               final currentPlaylist = playlist[index];
               if (index == playlist.length - 1) {

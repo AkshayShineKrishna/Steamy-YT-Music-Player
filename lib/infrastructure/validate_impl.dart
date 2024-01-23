@@ -12,9 +12,23 @@ import 'package:steamy/domain/validate/validate_song/model/validate_song_data_re
 @LazySingleton(as: ValidateServices)
 class ValidateImp implements ValidateServices {
   @override
-  Future<Either<MainFailure, ValidateSongDataResponse>> validateSong() {
-    // TODO: implement validateSong
-    throw UnimplementedError();
+  Future<Either<MainFailure, ValidateSongDataResponse>> validateSong({required String songUrl}) async{
+    try {
+      final formData = FormData.fromMap({'video_url': songUrl});
+      final Response response = await Dio(BaseOptions()).post(
+          ApiEndpoints.validateSong,
+          data: formData);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        log(response.data.toString());
+        final result = ValidateSongDataResponse.fromJson(response.data);
+        return Right(result);
+      } else {
+        return const Left(MainFailure.serverFailure());
+      }
+    } catch (e) {
+      log(e.toString());
+      return const Left(MainFailure.clientFailure());
+    }
   }
 
   @override
@@ -37,4 +51,6 @@ class ValidateImp implements ValidateServices {
       return const Left(MainFailure.clientFailure());
     }
   }
+
+
 }

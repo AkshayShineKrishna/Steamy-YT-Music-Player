@@ -20,7 +20,7 @@ class DefaultBottomContainer extends StatelessWidget {
       children: [
         Container(
             width: double.infinity,
-            height: size.height < 800 ? size.height * 0.35 : size.height * 0.4,
+            height: size.width * 0.8,
             decoration: const BoxDecoration(
               color: kWhite,
               borderRadius: BorderRadius.only(

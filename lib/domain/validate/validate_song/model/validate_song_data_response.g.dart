@@ -22,10 +22,10 @@ Map<String, dynamic> _$ValidateSongDataResponseToJson(
 
 SongDataResult _$SongDataResultFromJson(Map<String, dynamic> json) =>
     SongDataResult(
-      artist: json['artist'] as String?,
-      songDuration: json['song_duration'] as String?,
-      songKey: json['song_key'] as String?,
-      title: json['title'] as String?,
+      artist: json['artist'] as String? ?? '',
+      songDuration: json['song_duration'] as String? ?? '0 sec',
+      songKey: json['song_key'] as String? ?? '',
+      title: json['title'] as String? ?? '',
     );
 
 Map<String, dynamic> _$SongDataResultToJson(SongDataResult instance) =>

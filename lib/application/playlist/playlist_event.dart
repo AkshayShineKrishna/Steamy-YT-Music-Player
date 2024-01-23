@@ -25,4 +25,13 @@ class PlaylistEvent with _$PlaylistEvent {
   const factory PlaylistEvent.validatePlaylist({
     required List<String> urlList,
   }) = _ValidatePlaylist;
+
+  const factory PlaylistEvent.createPlaylist({
+    required String name,
+    required String? desc,
+    required String? mood,
+  }) = _CreatePlaylist;
+
+  const factory PlaylistEvent.validateSong({required String songUrl,required String playlistName}) =
+      _ValidateSong;
 }
