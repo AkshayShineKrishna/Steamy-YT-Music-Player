@@ -25,4 +25,6 @@ We welcome contributions to Steamy from the open-source community. If you find a
 
 
 ## Contact 📞
-
+<a href="mailto:akshayshinekrishna@gmail.com"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/gmail.png" alt="Gmail" height="22px"></a>
+<a href="https://www.linkedin.com/in/akshay-shine-krishna/"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/linkedin.png" alt="LinkedIn" height="22px"></a>
+<a href="https://www.instagram.com/_._cybertron._"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/instagram.png" alt="Instagram" height="22px"></a>
