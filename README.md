@@ -14,6 +14,7 @@ Steamy is a Flutter app that serves as a music player, allowing users to stream 
 - **Stream Music from YouTube:** Users can paste YouTube links into the app, which will fetch and stream the music without any ads, providing a seamless listening experience. 🔊🎧
 - **Download Music:** Steamy allows users to download their favorite tracks from YouTube for offline listening, making it convenient for users to enjoy their music even without an internet connection. 💾🎵
 - **Background Audio Support:** The app enables background audio support, so users can continue listening to their favorite tracks even when the app is running in the background or the device is locked. 🎵🔊
+- **Create and Manage Playlists:** Build and curate your music collection with ease. Steamy lets you create and manage playlists, providing a personalized and organized listening experience. 📜🎶
 
 ## Development Status 🚧
 
