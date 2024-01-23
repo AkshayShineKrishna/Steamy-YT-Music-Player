@@ -19,18 +19,10 @@ Steamy is a Flutter app that serves as a music player, allowing users to stream 
 
 The development of Steamy is currently in progress. We are continuously working on adding new features, enhancing performance, and ensuring a smooth user experience. Please note that as the project is still under development, you might encounter some bugs or missing features. However, we actively welcome contributions from the community and appreciate feedback to help us make Steamy better with each update. 🙌
 
-## Getting Started 🚀
-
-📝 . . .
-
 ## Contribution 🤝
 
 We welcome contributions to Steamy from the open-source community. If you find any issues, have new feature ideas, or want to contribute to the project in any way, please feel free to create a pull request or raise an issue in the repository. 🎉
 
-## License 📜
-
-📄 . . .
 
 ## Contact 📞
 
-. . .      
