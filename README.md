@@ -12,7 +12,7 @@ Steamy is a Flutter app that serves as a music player, allowing users to stream 
 
 ## Screenshots
 
-<img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp1.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp2.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp3.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp4.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp5.png" width="35%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp6.png" width="35%">
+<img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp1.png" width="30%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp2.png" width="30%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp3.png" width="30%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp4.png" width="30%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp5.png" width="30%"> <img src="https://github.com/AkshayShineKrishna/Steamy-YT-Music-Streamer/blob/beta/assets/readme%20assets/mkp6.png" width="30%">
 
 ## Features 🎶
 
